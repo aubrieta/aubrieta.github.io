@@ -1,0 +1,39 @@
+body {
+    background-color: #f3e9dd;
+    font-family: 'Palatino', serif;
+    color: #654321; /* Dark brown color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    text-align: center; /* Center text inside container */
+}
+
+.container {
+    width: 60%; /* Set container width to 90% of viewport width */
+    padding: 20px;
+    overflow: hidden; /* Ensures container wraps around floated image */
+    text-align: left; /* Align text inside container to the left */
+}
+
+img.right-aligned {
+    float: right;
+    max-width: 40%; /* Set maximum width of the image as 40% of the viewport width */
+    width: auto; /* Allow the image to scale proportionally */
+    margin-left: 15%; /* Adjust margin for spacing */
+    margin-bottom: 20px; /* Adjust bottom margin */
+}
+
+p.left-justified {
+    text-align: justify;
+    margin-bottom: 20px; /* Increase bottom margin for paragraph spacing */
+    font-size: 1.2vw; /* Set font size relative to viewport width */
+}
+
+.math-text {
+    font-size: 2vw; /* Adjust font size for the math expression */
+    font-style: italic; /* Optional: Set italic style */
+}
+
