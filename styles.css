@@ -37,3 +37,11 @@ p.left-justified {
     font-style: italic; /* Optional: Set italic style */
 }
 
+a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Default link color */
+    padding: 2px 2px; /* Padding for clickable area */
+    background-color: rgba(210, 192, 168, 0.5); /* Highlight color */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
