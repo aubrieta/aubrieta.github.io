@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lenga d'òc</title>
+    <title>Random Word Selector</title>
     <style>
         body {
             font-family: 'Palatino', serif;
@@ -14,17 +14,17 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            color: #654321;
+            color: #654321;; /* Default link color */
         }
         .box {
             padding: 20px;
             margin: 10px;
             background-color: #fbf5ee; /* Lighter background color */
             border: 1px solid #ccc; /* Outline */
-            box-shadow: 0 0 10px rgba(210, 192, 168, 0.5); /* Shadow */
+            box-shadow: 0 0 10px rgba(200, 172, 135, 0.5); /* Shadow */
             width: 300px;
             text-align: center;
-            color: #654321;
+            color: #654321;; /* Default link color */
         }
         .button {
             padding: 20px;
@@ -37,7 +37,7 @@
             text-decoration: none; /* Remove underline for anchor */
             color: black; /* Text color */
             display: inline-block;
-            color: #654321;
+            color: #654321;; /* Default link color */
         }
         .hidden {
             display: none;
@@ -68,7 +68,7 @@
     </style>
 </head>
 <body>
-    <a id="back-to-index" href="../" class="button">Back</a>
+    <a id="back-to-index" href="../index.html" class="button">Back</a>
     <div id="content" class="hidden">
         <a id="pre-selection-back-button" href="../index.html" class="button">Back</a>
         <div id="word1" class="box"></div>
@@ -94,7 +94,8 @@
 
             let words = [];
             let currentIndex = -1;
-            let showingFirstWord = true;
+            let currentColumn = 0; // Track the current column (0 or 1)
+            let totalColumns = 2; // Total number of columns in the TSV file
 
             // Existing button click event listeners
             document.querySelectorAll('.button').forEach(button => {
@@ -122,10 +123,29 @@
                 window.location.href = '../index.html';
             });
 
-            // Rest of your JavaScript code
+            // Keydown event listener for Enter key
             document.addEventListener('keydown', function (event) {
                 if (event.key === 'Enter') {
-                    if (showingFirstWord) {
+                    event.preventDefault(); // Prevent default action (e.g., form submission)
+                    if (currentColumn === 0) {
+                        showSecondWord();
+                    } else {
+                        showRandomWord();
+                    }
+                } else {
+                    // Move to next column if any other key is pressed
+                    if (currentColumn === 0) {
+                        showSecondWord();
+                    } else {
+                        showRandomWord();
+                    }
+                }
+            });
+
+            // Click event listener to move to the next column when clicking outside back-button
+            document.addEventListener('click', function (event) {
+                if (event.target !== backButton && event.target.closest('#back-button') === null) {
+                    if (currentColumn === 0) {
                         showSecondWord();
                     } else {
                         showRandomWord();
@@ -148,14 +168,14 @@
                 const currentWord = words[currentIndex];
                 word1Box.textContent = currentWord[0];
                 word2Box.classList.add('hidden');
-                showingFirstWord = true;
+                currentColumn = 0; // Set to first column
             }
 
             function showSecondWord() {
                 const currentWord = words[currentIndex];
                 word2Box.textContent = currentWord[1];
                 word2Box.classList.remove('hidden');
-                showingFirstWord = false;
+                currentColumn = 1; // Set to second column
             }
         });
     </script>
