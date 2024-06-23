@@ -31,7 +31,6 @@ body {
     border-radius: 5px; /* Rounded corners */
 }
 
-
 .container {
     display: flex;
     flex-direction: row;
@@ -42,6 +41,23 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-panel {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    /* background-color: #f9f9f9; */
+}
+
+
+ul li {
+    margin-bottom: 10px; /* Add space between list items */
+}
+
+.right-panel {
+    flex: 1;
+    padding: 20px;
 }
 
 .question-container {
