@@ -41,8 +41,8 @@ function showResults() {
 
     if (result) {
         let liePosition = response.map((val, index) => val !== result.code[index] ? index + 1 : -1).filter(val => val > 0)[0];
-        document.getElementById('results').textContent = `The face is ${result.face} and the lie was in question ${liePosition}.`;
+        document.getElementById('results').textContent = `The character is ${result.face} and the lie was in question ${liePosition}.`;
     } else {
-        document.getElementById('results').textContent = "Unable to identify the face. Please check the responses.";
+        document.getElementById('results').textContent = "Unable to identify the character. Please check the responses.";
     }
 }
