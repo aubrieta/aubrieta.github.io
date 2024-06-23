@@ -3,73 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guess the Face (with a Lie)</title>
+    <title>lie twice</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <a id="back-to-index" href="../guess-who/index.html" class="button">Back</a>
     <div class="container">
-        <div class="left-panel">
-            <h2>Instructions</h2>
-            <p>Welcome to the Guess the Face game! Here's how to play:</p>
-            <ol>
-                <li>Select a face from the provided images.</li>
-                <li>Answer the following 5 questions about the character's features.</li>
-                <li>Make sure to lie about exactly one feature.</li>
-                <li>Click the "Submit" button to see if we can identify the face and the lie!</li>
-            </ol>
-            <p>Features:</p>
-            <ul>
-                <li>Wears glasses</li>
-                <li>Has a beard</li>
-                <li>Is smiling</li>
-                <li>Wears a hat</li>
-                <li>Has dark hair</li>
-            </ul>
-        </div>
-        <div class="right-panel">
-            <h2>Guess the Face! (with one lie)</h2>
-            <form id="faceForm">
+        <div class="question-container">
+            <h2>Guess who! (lie twice) </h2>
+            <!-- <h2>Lie once.</h2> -->
+            <form id="characterForm">
                 <div class="question">
-                    <p>1. Does this character wear glasses?</p>
+                    <p>1. Does this character wear a hat or head covering?</p>
                     <div class="options">
                         <label><input type="radio" name="q1" value="1"> Yes</label>
                         <label><input type="radio" name="q1" value="0"> No</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>2. Does this character have a beard?</p>
+                    <p>2. Does this character wear (sun)glasses?</p>
                     <div class="options">
                         <label><input type="radio" name="q2" value="1"> Yes</label>
                         <label><input type="radio" name="q2" value="0"> No</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>3. Is this character smiling?</p>
+                    <p>3. Does this character have an unhappy facial expression?</p>
                     <div class="options">
                         <label><input type="radio" name="q3" value="1"> Yes</label>
                         <label><input type="radio" name="q3" value="0"> No</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>4. Does this character wear a hat?</p>
+                    <p>4. Does this character have facial hair?</p>
                     <div class="options">
                         <label><input type="radio" name="q4" value="1"> Yes</label>
                         <label><input type="radio" name="q4" value="0"> No</label>
                     </div>
                 </div>
                 <div class="question">
-                    <p>5. Does this character have dark hair?</p>
+                    <p>5. Does this character wear a graphic t-shirt?</p>
                     <div class="options">
                         <label><input type="radio" name="q5" value="1"> Yes</label>
                         <label><input type="radio" name="q5" value="0"> No</label>
                     </div>
                 </div>
-                <button type="button" class="submit-btn" onclick="showResults()">Submit</button>
+                <div class="question">
+                    <p>6. Does this character wear a blue t-shirt?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q6" value="1"> Yes</label>
+                        <label><input type="radio" name="q6" value="0"> No</label>
+                    </div>
+                </div>
+                <div class="question">
+                    <p>7. Does this character have dark hair?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q7" value="1"> Yes</label>
+                        <label><input type="radio" name="q7" value="0"> No</label>
+                    </div>
+                </div>
+                <button type="button" id="submitBtn">Submit</button>
                 <div id="results"></div>
             </form>
         </div>
+        <div class="image-container">
+            <img src="characters.PNG" alt="Character Image">
+        </div>
     </div>
-    <script src="face-guess-script.js"></script>
+    <script src="two-lies-script.js"></script>
 </body>
 </html>

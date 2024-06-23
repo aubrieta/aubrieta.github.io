@@ -1,136 +1,110 @@
-#back-to-index {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('submitBtn').addEventListener('click', showResults);
+});
 
-body {
-    font-family: 'Palatino', serif;
-    background-color: #f3e9dd;
-    display: flex;
-    padding: 20px;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    color: #654321; /* Default link color */
-}
+function showResults() {
+    console.log("Show results function called");
 
-.button {
-    padding: 20px;
-    margin: 10px;
-    background-color: rgba(210, 192, 168, 0.5); /* Darker shade of #f3e9dd */
-    border: none;
-    box-shadow: none;
-    text-align: center;
-    cursor: pointer;
-    text-decoration: none; /* Remove underline for anchor */
-    color: black; /* Text color */
-    display: inline-block;
-    color: #654321;; /* Default link color */
-    border-radius: 5px; /* Rounded corners */
-}
+    // Initialize character array
+    let character = [];
 
-.container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    max-width: 1200px; /* Adjust the max-width as needed */
-    margin: auto;
-    background-color: #fbf5ee;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.left-panel {
-    flex: 1;
-    padding: 20px;
-    border-right: 1px solid #ccc;
-    background-color: #f9f9f9;
-}
-
-.right-panel {
-    flex: 1;
-    padding: 20px;
-}
-
-.question-container {
-    flex: 1;
-    padding-right: 20px; /* Space between questions and image */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-}
-
-.question {
-    margin-bottom: 20px;
-}
-
-.question p {
-    margin-bottom: 10px;
-}
-
-.options {
-    display: flex;
-    gap: 10px;
-}
-
-.options label {
-    cursor: pointer;
-}
-
-.submit-btn {
-    display: block;
-    margin: 20px auto 0;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.submit-btn:hover {
-    background-color: #0056b3;
-}
-
-.image-container {
-    flex: 2; /* Increase flex value to make the image container larger */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.image-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px; /* Optional for better visuals */
-    object-fit: contain; /* Maintain aspect ratio within container */
-}
-
-#results {
-    margin-top: 20px;
-    text-align: center;
-}
-
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
+    // Get user's answers from radio buttons
+    for (let i = 1; i <= 7; i++) {
+        const answer = document.querySelector(`input[name="q${i}"]:checked`);
+        if (answer) {
+            character.push(parseInt(answer.value));
+        } else {
+            alert("Please answer all questions.");
+            return;
+        }
     }
 
-    .question-container {
-        padding-right: 0;
+    console.log("Character answers: ", character);
+
+    // Define the parity-check matrix H and syndrome vectors
+    const H = [
+        [1, 1, 0, 1, 1, 0, 0],
+        [1, 0, 1, 1, 0, 1, 0],
+        [0, 1, 1, 1, 0, 0, 1]
+    ];
+    const syndrome = [
+        [1, 1, 0],
+        [1, 0, 1],
+        [0, 1, 1],
+        [1, 1, 1],
+        [1, 0, 0],
+        [0, 1, 0],
+        [0, 0, 1]
+    ];
+
+    let receivedWord = character.slice(); // Copy of character array
+
+    let possibleResults = [];
+
+    // Check for all pairs of possible error positions
+    for (let i = 0; i < receivedWord.length; i++) {
+        for (let j = i + 1; j < receivedWord.length; j++) {
+            // Flip the bits at positions i and j
+            let tempWord = receivedWord.slice();
+            tempWord[i] = (tempWord[i] === 1) ? 0 : 1;
+            tempWord[j] = (tempWord[j] === 1) ? 0 : 1;
+
+            // Calculate syndrome for the new word
+            let calculatedSyndrome = [0, 0, 0];
+            for (let k = 0; k < H.length; k++) {
+                let sum = 0;
+                for (let l = 0; l < H[k].length; l++) {
+                    sum += H[k][l] * tempWord[l];
+                }
+                calculatedSyndrome[k] = sum % 2;
+            }
+
+            // If syndrome is zero, it's a valid codeword
+            if (arraysEqual(calculatedSyndrome, [0, 0, 0])) {
+                // Define character dictionary (similar to your Sage code)
+                const charDict = {
+                    '0000000': 'Fanny',
+                    '0001111': 'Arthur',
+                    '0010011': 'Coraline',
+                    '0011100': 'Hippolyte',
+                    '0100101': 'Gwen',
+                    '0101010': 'Augustin',
+                    '0110110': 'Maggie',
+                    '0111001': 'Roger',
+                    '1000110': 'Martin',
+                    '1001001': 'Theophile',
+                    '1010101': 'Capucine',
+                    '1011010': 'Maxime',
+                    '1100011': 'Melina',
+                    '1101100': 'Robin',
+                    '1110000': 'Sandra',
+                    '1111111': 'Justine'
+                };
+
+                let char = charDict[tempWord.join('')];
+                if (char) {
+                    possibleResults.push({ character: char, errors: [i + 1, j + 1] });
+                }
+            }
+        }
     }
 
-    .image-container {
-        margin-top: 20px;
+    if (possibleResults.length > 0) {
+        let resultText = "Possible characters and error locations:\n";
+        for (let result of possibleResults) {
+            resultText += `Your character may have been ${result.character}, lies in questions: ${result.errors.join(' and ')}\n`;
+        }
+        document.getElementById('results').textContent = resultText;
+    } else {
+        document.getElementById('results').textContent = "No valid characters found. Please check your responses.";
     }
+}
 
-    .image-container img {
-        width: 100%; /* Make sure the image still takes the full width on smaller screens */
-        height: auto; /* Maintain aspect ratio */
+// Function to compare arrays
+function arraysEqual(arr1, arr2) {
+    if (arr1.length !== arr2.length) return false;
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] !== arr2[i]) return false;
     }
+    return true;
 }
