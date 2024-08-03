@@ -1,141 +1,92 @@
-#back-to-index {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
 body {
     font-family: 'Palatino', serif;
     background-color: #f3e9dd;
-    display: flex;
-    padding: 20px;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    color: #654321;
     margin: 0;
-    color: #654321; /* Default link color */
+    padding: 40px 20px;
+    line-height: 1.6;
 }
 
-.button {
-    padding: 20px;
-    margin: 10px;
-    background-color: rgba(210, 192, 168, 0.5); /* Darker shade of #f3e9dd */
-    border: none;
-    box-shadow: none;
+header {
     text-align: center;
-    cursor: pointer;
-    text-decoration: none; /* Remove underline for anchor */
-    color: black; /* Text color */
-    display: inline-block;
-    color: #654321;; /* Default link color */
-    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 40px;
 }
 
-.container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    max-width: 1200px; /* Adjust the max-width as needed */
-    margin: auto;
-    background-color: #fbf5ee;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+h1 {
+    font-size: 1.75em;
+    font-weight: 400;
+    color: #654321;
 }
 
-.left-panel {
-    flex: 1;
-    padding: 20px;
-    border-right: 1px solid #ccc;
-    /* background-color: #f9f9f9; */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 40px; /* Increased padding for more space */
 }
 
-
-ul li {
-    margin-bottom: 10px; /* Add space between list items */
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 40px;
 }
 
-.right-panel {
-    flex: 1;
-    padding: 20px;
+.timeline-point {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background-color: #654321;
+    border-radius: 50%;
+    border: 3px solid #f3e9dd;
+    z-index: 1;
 }
 
-.question-container {
-    flex: 1;
-    padding-right: 20px; /* Space between questions and image */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #654321;
+    z-index: 0;
 }
 
-.question {
-    margin-bottom: 20px;
+.timeline-item:last-child::before {
+    bottom: 8px; /* Add space at the bottom to ensure the line doesn't touch the last point */
 }
 
-.question p {
+.timeline-content {
+    margin-left: 60px; /* Increased margin for clarity */
+}
+
+.timeline-content h2 {
+    font-size: 1.25em;
+    font-weight: 400;
+    color: #654321;
     margin-bottom: 10px;
 }
 
-.options {
-    display: flex;
-    gap: 10px;
+.timeline-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
 }
 
-.options label {
-    cursor: pointer;
+.timeline-content ul li {
+    margin-bottom: 8px;
 }
 
-.submit-btn {
-    display: block;
-    margin: 20px auto 0;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.timeline-content ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1em;
+    font-weight: 300;
+    transition: color 0.3s ease;
 }
 
-.submit-btn:hover {
-    background-color: #0056b3;
-}
-
-.image-container {
-    flex: 2; /* Increase flex value to make the image container larger */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.image-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px; /* Optional for better visuals */
-    object-fit: contain; /* Maintain aspect ratio within container */
-}
-
-#results {
-    margin-top: 20px;
-    text-align: center;
-}
-
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .question-container {
-        padding-right: 0;
-    }
-
-    .image-container {
-        margin-top: 20px;
-    }
-
-    .image-container img {
-        width: 100%; /* Make sure the image still takes the full width on smaller screens */
-        height: auto; /* Maintain aspect ratio */
-    }
+.timeline-content ul li a:hover {
+    color: #0056b3;
 }
