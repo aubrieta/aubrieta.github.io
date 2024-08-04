@@ -14,12 +14,13 @@
 }
 
 .announcements-banner a {
-    color: #654321;
-    text-decoration: underline;
+    color: rgb(56, 138, 225);
+    text-decoration: none;
+    
 }
 
 .announcements-banner a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: #333; /* Slightly darker color on hover */
 }
 
@@ -223,10 +224,12 @@ tr:hover {
 }
 
 a {
-    color: #654321;
-    text-decoration: underline;
+    text-decoration: none;
+    /* color: #654321; */
+    color: rgb(56, 138, 225);
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: rgb(56, 138, 225);
 }

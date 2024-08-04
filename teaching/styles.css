@@ -7,79 +7,43 @@ body {
     line-height: 1.6;
 }
 
-header {
-    text-align: center;
-    margin-bottom: 40px;
+header, main {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 h1 {
+    text-align: center;
     font-size: 1.75em;
     font-weight: 400;
     color: #654321;
+    margin-bottom: 30px;
 }
 
-.timeline {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    padding-left: 40px; /* Increased padding for more space */
+.class-section {
+    margin-bottom: 30px;
 }
 
-.timeline-item {
-    position: relative;
-    margin-bottom: 40px;
-    padding-left: 40px;
-}
-
-.timeline-point {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 16px;
-    height: 16px;
-    background-color: #654321;
-    border-radius: 50%;
-    border: 3px solid #f3e9dd;
-    z-index: 1;
-}
-
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: 7px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background-color: #654321;
-    z-index: 0;
-}
-
-.timeline-item:last-child::before {
-    bottom: 8px; /* Add space at the bottom to ensure the line doesn't touch the last point */
-}
-
-.timeline-content {
-    margin-left: 60px; /* Increased margin for clarity */
-}
-
-.timeline-content h2 {
+.class-section h2 {
     font-size: 1.25em;
     font-weight: 400;
     color: #654321;
     margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
 }
 
-.timeline-content ul {
+.class-section ul {
     list-style: none;
     padding-left: 0;
     margin: 0;
 }
 
-.timeline-content ul li {
+.class-section ul li {
     margin-bottom: 8px;
 }
 
-.timeline-content ul li a {
+.class-section ul li a {
     text-decoration: none;
     color: #007bff;
     font-size: 1em;
@@ -87,6 +51,7 @@ h1 {
     transition: color 0.3s ease;
 }
 
-.timeline-content ul li a:hover {
-    color: #0056b3;
+.class-section ul li a:hover {
+    text-decoration: none;
+    color: rgb(56, 138, 225);
 }
