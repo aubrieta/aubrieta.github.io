@@ -45,7 +45,7 @@ h1 {
 
 .class-section ul li a {
     text-decoration: none;
-    color: #007bff;
+    color: rgb(56, 138, 225);
     font-size: 1em;
     font-weight: 300;
     transition: color 0.3s ease;
