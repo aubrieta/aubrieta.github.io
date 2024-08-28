@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>memes</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Add specific styles for the image list */
+        .image-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .image-list li {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .image-list a {
+            color: #654321; /* Match your existing color scheme */
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .image-list a:hover {
+            color: rgb(56, 138, 225); /* Color on hover */
+        }
+
+        .image-preview {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 150px; /* Adjust as needed */
+            width: 500px; 
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-list li:hover .image-preview {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <h1>really bad math memes</h1>
+    <ul class="image-list">
+        <li>
+            <a href="meme-set/whats-your-sine.jpeg" target="_blank">what's your sine</a>
+            <img src="meme-set/whats-your-sine.jpeg" alt="what's your sine" class="image-preview">
+        </li>
+        <li>
+            <a href="meme-set/corporate-transformations.jpeg" target="_blank">corporate transformations</a>
+            <img src="meme-set/corporate-transformations.jpeg" alt="corporate transformations" class="image-preview">
+        </li>
+        <!-- Add more images as needed -->
+    </ul>
+</div>
+
+</body>
+</html>

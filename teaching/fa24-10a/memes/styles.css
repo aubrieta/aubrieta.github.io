@@ -51,12 +51,12 @@ body {
 }
 
 .title-container h1 {
-    margin-top: 40px; /* Adjust the value as needed */
+    margin-top: 20px; /* Adjust the value as needed */
     font-size: 24px; /* Adjust the size as needed */
 }
 
 .title-container h2 {
-    margin-top: 20px; /* Adjust the value as needed */
+    margin-top: 10px; /* Adjust the value as needed */
     color: #654321; /* Set the desired color */
     font-weight: normal; /* Remove bolding */
     font-size: 20px; /* Set a smaller size */
@@ -90,31 +90,6 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-.important-links {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: rgba(210, 192, 168, 0.5); /* Matching background color */
-    padding: 10px;
-    border-radius: 5px;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); Optional shadow */
-    display: flex;
-    gap: 10px;
-}
-
-.important-links a {
-    color: #654321; /* Matching text color */
-    text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 3px;
-    transition: background-color 0.3s ease;
-}
-
-.important-links a:hover {
-    background-color: rgba(210, 192, 168, 0.7); /* Slightly darker on hover */
-}
-
 
 .left-panel {
     flex: 1;
