@@ -193,6 +193,18 @@ ul li {
     text-align: center;
 }
 
+.standout-row {
+    background-color: rgba(210, 192, 168, 0.05);
+    /* color: #333; */
+    border-left: 4px solid rgba(101, 67, 33, 0.8); /* Strong left border */
+    padding-left: 10px; /* Space for the border */
+}
+
+.standout-row:hover {
+    border-left: 4px solid rgba(101, 67, 33, 1); /* Stronger color on hover */
+}
+
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -257,4 +269,12 @@ a {
 a:hover {
     text-decoration: none;
     color: rgb(56, 138, 225);
+}
+
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 }
