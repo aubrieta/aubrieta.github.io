@@ -15,7 +15,7 @@ body {
 
 /* Soft highlight class */
 .hl {
-    background-color: rgb(231, 214, 214); /* Slightly darker than the background */
+    background-color: rgb(247, 225, 225); /* Slightly darker than the background */
     padding: 3px 6px;
     border-radius: 8px;
     color: #654321; /* Same text color */
