@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all <hl> elements in the document
+        const hlElements = document.querySelectorAll('hl');
+        
+        // Replace each <hl> element with a <span class="hl">
+        hlElements.forEach(function(hl) {
+            const span = document.createElement('span');
+            span.classList.add('hl');
+            span.innerHTML = hl.innerHTML;
+            hl.replaceWith(span);
+        });
+    });
+</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>romling</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="content">
+        <div class="title-container">
+            <h1><i>verb conjugations</i></h1>
+        </div>
+
+        <!-- parlar -->
+        <div class="entry">
+            <div class="box">                
+                <div class="conjugation">
+                    <h3>parlar</h3>
+                    <p>parlat, parlada</p>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>1s</th>
+                            <th>2s</th>
+                            <th>3s</th>
+                            <th>1p</th>
+                            <th>2p</th>
+                            <th>3p</th>
+                        </tr>
+                        <tr>
+                            <th>present ind</th>
+                            <td>parl<hl>i</hl></td>
+                            <td>parl <hl>as</hl></td>
+                            <td>parl<hl>a</hl></td>
+                            <td>parl<hl>am</hl></td>
+                            <td>parl<hl>atz</hl></td>
+                            <td>parl<hl>an</hl></td>
+
+
+                        </tr>
+                        <tr>
+                            <th>imperfect ind</th>
+                            <td>parl<hl>avi</hl></td>
+                            <td>parl<hl>avas</hl></td>
+                            <td>parl<hl>ava</hl></td>
+                            <td>parl<hl>àvem</hl></td>
+                            <td>parl<hl>àvetz</hl></td>
+                            <td>parl<hl>avan</hl></td>
+                        </tr>
+                        <tr>
+                            <th>future ind</th>
+                            <td>parlar<hl>ai</hl></td>
+                            <td>parlar<hl>às</hl></td>
+                            <td>parlar<hl>à</hl></td>
+                            <td>parlar<hl>em</hl></td>
+                            <td>parlar<hl>etz</hl></td>
+                            <td>parlar<hl>àn</hl></td>
+                        </tr>
+                        <tr>
+                            <th>conditional</th>
+                            <td>parlar<hl>iái</hl></td>
+                            <td>parlar<hl>iás</hl></td>
+                            <td>parlar<hl>iá</hl></td>
+                            <td>parlar<hl>iam</hl></td>
+                            <td>parlar<hl>iatz</hl></td>
+                            <td>parlar<hl>ián</hl></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="examples">
+                    <!-- <p>El parla occitan. <i>(He speaks Occitan.)</i></p> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- sentir -->
+        <div class="entry">
+            <div class="box">                
+                <div class="conjugation">
+                    <h3>sentir</h3>
+                    <p>sentit, sentida</p>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>1s</th>
+                            <th>2s</th>
+                            <th>3s</th>
+                            <th>1p</th>
+                            <th>2p</th>
+                            <th>3p</th>
+                        </tr>
+                        <tr>
+                            <th>present ind</th>
+                            <td>sent<hl>i</hl></td>
+                            <td>sent <hl>es</hl></td>
+                            <td>sent</td>
+                            <td>sent<hl>èm</hl></td>
+                            <td>sent<hl>ètz</hl></td>
+                            <td>sent<hl>on</hl></td>
+
+
+                        </tr>
+                        <tr>
+                            <th>imperfect ind</th>
+                            <td>sent<hl>iái</hl></td>
+                            <td>sent<hl>iás</hl></td>
+                            <td>sent<hl>iá</hl></td>
+                            <td>sent<hl>iam</hl></td>
+                            <td>sent<hl>iatz</hl></td>
+                            <td>sent<hl>ián</hl></td>
+                        </tr>
+                        <tr>
+                            <th>future ind</th>
+                            <td>sentir<hl>ái</hl></td>
+                            <td>sentir<hl>às</hl></td>
+                            <td>sentir<hl>à</hl></td>
+                            <td>sentir<hl>em</hl></td>
+                            <td>sentir<hl>etz</hl></td>
+                            <td>sentir<hl>àn</hl></td>
+                        </tr>
+                        <tr>
+                            <th>conditional</th>
+                            <td>sentir<hl>iái</hl></td>
+                            <td>sentir<hl>iás</hl></td>
+                            <td>sentir<hl>iá</hl></td>
+                            <td>sentir<hl>iam</hl></td>
+                            <td>sentir<hl>iatz</hl></td>
+                            <td>sentir<hl>ián</hl></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="examples">
+                    <!-- <p>El parla occitan. <i>(He speaks Occitan.)</i></p> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- batre -->
+        <div class="entry">
+            <div class="box">                
+                <div class="conjugation">
+                    <h3>batre</h3>
+                    <p>batut, batudo</p>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>1s</th>
+                            <th>2s</th>
+                            <th>3s</th>
+                            <th>1p</th>
+                            <th>2p</th>
+                            <th>3p</th>
+                        </tr>
+                        <tr>
+                            <th>present ind</th>
+                            <td>bat<hl>i</hl></td>
+                            <td>bat<hl>es</hl></td>
+                            <td>bat</td>
+                            <td>bat<hl>èm</hl></td>
+                            <td>bat<hl>ètz</hl></td>
+                            <td>bat<hl>on</hl></td>
+
+
+                        </tr>
+                        <tr>
+                            <th>imperfect ind</th>
+                            <td>bat<hl>iái</hl></td>
+                            <td>bat<hl>iás</hl></td>
+                            <td>bat<hl>iá</hl></td>
+                            <td>bat<hl>iam</hl></td>
+                            <td>bat<hl>iatz</hl></td>
+                            <td>bat<hl>ián</hl></td>
+                        </tr>
+                        <tr>
+                            <th>future ind</th>
+                            <td>batr<hl>ai</hl></td>
+                            <td>batr<hl>às</hl></td>
+                            <td>batr<hl>à</hl></td>
+                            <td>batr<hl>em</hl></td>
+                            <td>batr<hl>etz</hl></td>
+                            <td>batr<hl>àn</hl></td>
+                        </tr>
+                        <tr>
+                            <th>conditional</th>
+                            <td>batr<hl>iái</hl></td>
+                            <td>batr<hl>iás</hl></td>
+                            <td>batr<hl>iá</hl></td>
+                            <td>batr<hl>iam</hl></td>
+                            <td>batr<hl>iatz</hl></td>
+                            <td>batr<hl>ián</hl></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="examples">
+                    <!-- <p>El parla occitan. <i>(He speaks Occitan.)</i></p> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- esser -->
+        <div class="entry">
+            <div class="box">                
+                <div class="conjugation">
+                    <h3>esser</h3>
+                    <p>estat, estada</p>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>1s</th>
+                            <th>2s</th>
+                            <th>3s</th>
+                            <th>1p</th>
+                            <th>2p</th>
+                            <th>3p</th>
+                        </tr>
+                        <tr>
+                            <th>present ind</th>
+                            <td>soi</td>
+                            <td>siás</td>
+                            <td>es</td>
+                            <td>sèm</td>
+                            <td>sètz</td>
+                            <td>son</td>
+
+
+                        </tr>
+                        <tr>
+                            <th>imperfect ind</th>
+                            <td>èri</td>
+                            <td>èras</td>
+                            <td>èra</td>
+                            <td>èra</td>
+                            <td>èrem</td>
+                            <td>èran</td>
+                        </tr>
+                        <tr>
+                            <th>future ind</th>
+                            <td>ser<hl>ai</hl></td>
+                            <td>ser<hl>às</hl></td>
+                            <td>ser<hl>à</hl></td>
+                            <td>ser<hl>em</hl></td>
+                            <td>ser<hl>etz</hl></td>
+                            <td>ser<hl>àn</hl></td>
+                        </tr>
+                        <tr>
+                            <th>conditional</th>
+                            <td>ser<hl>iái</hl></td>
+                            <td>ser<hl>iás</hl></td>
+                            <td>ser<hl>iá</hl></td>
+                            <td>ser<hl>iam</hl></td>
+                            <td>ser<hl>iatz</hl></td>
+                            <td>ser<hl>ián</hl></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="examples">
+                    <!-- <p>El parla occitan. <i>(He speaks Occitan.)</i></p> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- aver -->
+        <div class="entry">
+            <div class="box">                
+                <div class="conjugation">
+                    <h3>aver</h3>
+                    <p></p>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>1s</th>
+                            <th>2s</th>
+                            <th>3s</th>
+                            <th>1p</th>
+                            <th>2p</th>
+                            <th>3p</th>
+                        </tr>
+                        <tr>
+                            <th>present ind</th>
+                            <td><hl></hl></td>
+                            <td> <hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+
+
+                        </tr>
+                        <tr>
+                            <th>imperfect ind</th>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                        </tr>
+                        <tr>
+                            <th>future ind</th>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                        </tr>
+                        <tr>
+                            <th>conditional</th>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="examples">
+                    <!-- <p>El parla occitan. <i>(He speaks Occitan.)</i></p> -->
+                </div>
+            </div>
+        </div>
+
+
+        <!-- blank -->
+        <div class="entry">
+            <div class="box">                
+                <div class="conjugation">
+                    <h3></h3>
+                    <p></p>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>1s</th>
+                            <th>2s</th>
+                            <th>3s</th>
+                            <th>1p</th>
+                            <th>2p</th>
+                            <th>3p</th>
+                        </tr>
+                        <tr>
+                            <th>present ind</th>
+                            <td><hl></hl></td>
+                            <td> <hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+
+
+                        </tr>
+                        <tr>
+                            <th>imperfect ind</th>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                        </tr>
+                        <tr>
+                            <th>future ind</th>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                        </tr>
+                        <tr>
+                            <th>conditional</th>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                            <td><hl></hl></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="examples">
+                    <!-- <p>El parla occitan. <i>(He speaks Occitan.)</i></p> -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

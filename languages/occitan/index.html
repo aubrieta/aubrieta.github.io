@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all <hl> elements in the document
+        const hlElements = document.querySelectorAll('hl');
+        
+        // Replace each <hl> element with a <span class="hl">
+        hlElements.forEach(function(hl) {
+            const span = document.createElement('span');
+            span.classList.add('hl');
+            span.innerHTML = hl.innerHTML;
+            hl.replaceWith(span);
+        });
+    });
+</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>romling</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+   
+    
+    <div class="content">
+        <div class="title-container">
+            <h1><i>occitan notes</i></h1>
+        </div>
+
+        <h2 class="entry-date"># leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    
+                    <li>
+                        <hl></hl>
+                    </li>
+                    <li>
+                        <hl></hl>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="entry-date">Cinquanta tresena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    
+                    <li>
+                        <hl>a pas gaire cambiat</hl>: il n'a pas beaucoup changé
+                    </li>
+                    <li>
+                        <hl>sens passejar</hl>: sans se promener
+                    </li>
+                    <li>
+                        <hl>la sentor de la mar</hl>: l'odeur de la mer
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+
+
+        <h2 class="entry-date">Cinquanta dosena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>cambras</hl>: chambres
+                    </li>
+                    <li>
+                        <hl>lièches</hl>: lits
+                    </li>
+                    <li>
+                        <hl>aqui la clau</hl>: voilà la clef
+                    </li>
+                    <li>
+                        <hl>desrevelharetz</hl>: réveillerez
+                    </li>
+                </ul>
+                <p>Dins una ostalariá, podèm causir una cambra ambé banhador ò sensa.</p>
+                <p>Bonjorn, madama; avètz encara de cambras?</p>
+            </div>
+        </div>
+
+
+
+        <div class="entry">
+            <div class="box", style="text-align: center;">
+                <br><i><hl>Motejaire</hl> - Stéphane (Estève) Salendres </i> <br> 
+                
+                <br> Aquel matin de la vida mieuna, me soi levat per prene rota. Aviài dins l’idèa d’anar vèire <hl>la sòrga</hl> de las autras lengas. Ai fach la saqueta per prene lo camin, cabridar de mòt en mòt, descobrir, lo còr dintre las dents, los solelhs novèls dels pòbles oblidats. Soi partit dins lo negre terrible del jorn escanat, per l’ivèrn <hl>fresqueiron</hl>. Ai caminat, caminat, de linha en linha, de poësia en poësia, totjorn sul fil estrech de l’estrambòrd. Ai begut de libres per copar ma set. Ai manjat de pròsas per <hl>tapar lo trauc</hl> de mon ventre, <hl>atalentat</hl>. Ai aimat aqueles repas amistoses, a las taulas d’autres amics. Me soi assadolat d’aqueles topins comolats de bonas causas. Ai begut mai d’un còp lo vin docet del fruch de las paginas negrejadas, a me far virar la tèsta. Aquò fa de ben d’aver lo cap versant, per far passar la dolença d’una vida que fa mau. Sul camin, cada taula sembla un present, la man de l’amic per rescalorir lo còr, embarbastat pel frèsc del temps que passa.<br> 
+                
+                <br> N’ai tastat de camins espectacloses, gostoses e precioses, bastits de las pèiras finas de la poësia dau mond. Ai aimat tot aquò, l’ai aimat, mas soi totjorn revengut a nòstra taula, per manjar e beure a la santat dels <hl>fargaires</hl> d’eternitat.
+            </div>
+        </div>
+        <!-- <div class="entry">
+            <div class="box", style="text-align: center;">
+                <br><i>Per un Narcissi - Xavièr Bach</i> <br>
+                
+                <br>l'anar de son còs mut se mirava dins l'aiga<br>
+
+                <br>frega-bronzissiá son vestit ispre de tela rufa qu'acrancava una rómec aguirlandida d'un sause rosselh a la bròca seca d'un garric; las fuèlhas cracinavan jol córrer de sa camba lassa; s'alisava lo pitre per la camisa mièg dubèrta mentre que lo vent...<br>
+
+                <br>l'anar de son còs mut se mirava dins l'aiga<br>
+
+                <br>l'esclau èra estacat a la còrda de pèira; sa man cercava son cap e sa man furgava sos pèlses de desirança; sa cara s'enaurava de la jòia d'una mòrt; sa man cercava son còr.<br>
+
+                <br>l'agrat de son còs mut se mirava dins l'aiga<br>
+
+                <br>i a temps una dròlla l'aviá seguit a la broa de l'aiga; avián begut amassa una taça de vin, negre, sorne, qu'aviá faitas lors caras mai claras que l'entrelusir de boscalha; sa man fernissiá.<br>
+
+                <br>l'agrat de son còs nud se mirava dins l'aiga<br>
+
+                <br>gaitava, de longa; las causòtas blavas e vivas, los casses ronhoses bronzinent de ferum e la tornada parièra de sa cuèissa alisada.<br>
+
+                <br>l'agrat de son còr nud se mirava dins l'aiga<br>
+
+                <br>los bòsques èran cauds e lo cèl negrissiá; dont mai veniá la nuèit, dont mai son agach s'atrumava, asuaudit de tubas doças e candas; lo babau de son sénher s'arrapava a la flor pesolhièra; Narcissi se levèt...
+            </div>
+        </div> -->
+
+
+
+
+        <h2 class="entry-date">Cinquanta unena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    
+                    <li>
+                        <hl>a trescolat</hl>: s'est couché
+                    </li>
+                    <li>
+                        <hl>ostalariá</hl>: hôtellerie
+                    </li>
+                    <li>
+                        <hl>te trufavas d'el</hl>: tu te moques de lui
+                    </li>
+                    <li>
+                        <hl>amont</hl>: là-haut
+                    </li>
+                    <li>
+                        <hl>que nos espincha</hl>: qui nous observe
+                    </li>
+                </ul>
+            <p>Per dire de trobar quicòm de bon mercat e de plan tranqulon, prenètz a man drecha e al cap de la carrièra, trobaretz aquò.</p>
+            <p>De sera, se fau despachar pèr trobar una cambra pèr la nuechada.</p>
+            </div>
+        </div>
+
+
+        <h2 class="entry-date">Cinquantena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    
+                    <li>
+                        <hl>bèl e caud</hl>: beau et chaud
+                    </li>
+                    <li>
+                        <hl>davalatz</hl>: descendez
+                    </li>
+                    <li>
+                        <hl>cutetz pas los uèlhs</hl>: fermez pas les yeux
+                    </li>
+                    <li>
+                        <hl>minaires</hl>: mineurs
+                    </li>
+                    <li>
+                        <hl>benlèu qu'an</hl>: peut-être qu'il a
+                    </li>
+                </ul>
+                <p>I a de plajas de sabla coma aquelei de Palavàs o de Vauràs; d'autrei son que de codolièras.</p>
+                <p>Nos anam arrestar a-n-aquel campador per demandar s'an de plaça per un amic.</p>
+            </div>
+        </div>
+
+        
+        <h2 class="entry-date">Quaranta novena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        genièr, febrièr, març, abril/abrial, mai, junh, julh/julhet, agost, setembre, octòbre/octobre, novembre, decembre/desembre
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="entry-date">Quaranta ochena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>a pè</hl>: à pied
+                    </li>
+                    <li>
+                        <hl>peironenc</hl>: lapidaire
+                    </li>
+                    <li>
+                        <hl>cinnes</hl>: cygnes
+                    </li>
+                    <li>
+                        <hl>petancaires</hl>: joueurs de pétanque
+                    </li>
+                    <li>
+                        <hl>la ròda que vira</hl>: la roue qui tourne
+                    </li>
+                </ul>
+                <p>Arribam al centra. Contunharem a pè. Dins doás minutas serem a las arenas.</p>
+                <p>Poirem pensar a l'empèri roman, que dominava lo monde i a dos mila ans.</p>
+            </div>
+        </div>
+
+
+     
+
+
+        
+
+        <h2 class="entry-date">Quaranta setena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>a-n-aquel</hl>: à ce
+                    </li>
+                    <li>
+                        <hl>camionàs</hl>: camion
+                    </li>
+                    <li>
+                        <hl>vilatge</hl>: village
+                    </li>
+                    <li>
+                        <hl>còp d'uèlh</hl>: coup d'oeil
+                    </li>
+                    <li>
+                        <hl>sièrem</hl>: arriva (nous fûmes à)
+                    </li>
+                    <li>
+                        <hl>la sèrp</hl>: le serpent
+                    </li>
+                </ul>
+                <p>Quand tot lo monde serà prèst, poirem tornar partir per anar veire lo polit vilatge dels Bauces.</p>
+                <p>Nos diriam en infèrn, i manca res que lo Diable.</p>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="box", style="text-align: center;">
+                <i>Bruch dins <hl>lo brun</hl>- Benedicta Bonet</i><br>
+
+                <br>Lo durmir <hl>me ven gran</hl>.
+                <br>'Na <hl>bramada</hl> de vacha
+                <br>D'alai enguera venguda
+                <br>M'a tota sumsida.
+                <br>Ensus los fotuts traus
+                <br>N'an decessat de petar.
+                <br>Las <hl>soriç</hl> au granier,
+                <br>Que cavalen sens saber
+                <br>Qué far, ente 'nar,
+                <br>Ne 'doben ren a l'afar.
+                <br>Fau mina de m'acostumar
+                <br>Au misteri de la nuech ;
+                <br>Mas la pus <hl>v-òrra</hl> eidèia
+                <br>Subitament me traucha
+                <br>E au ventre me balha
+                <br>La paur negra.
+                <br>Me fie que ne'n ai plan
+                <br>Per cent set ans enguera
+                <br>A far petar entau los uelhs.
+                <br><hl>Me vire, me desvire</hl>,
+                <br>Dins lo linçòu,
+                <br>Que fai mas 'na pelha.
+                <br>E la suada que l'i trape
+                <br>Se <hl>boira a l'alen</hl>
+                <br>Que tròbe en dire.                
+            </div>
+        </div>
+
+
+        <h2 class="entry-date"> quaranta seisena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>lo mai complet</hl>: le plus complet
+                    </li>
+                    <li>
+                        <hl>les pas tan car come lo de</hl>: il n'est paus aussi cher que celui de
+                    </li>
+                    <li>
+                        <hl>lèu</hl>: bientôt
+                    </li>
+                    <li>
+                        <hl>deuriatz</hl>: devriez
+                    </li>
+                    <li>
+                        <hl>se bolega</hl>: se remue
+                    </li>
+                </ul>
+                <p>Avèm tanben de libres policièrs e aqui de romans, de poësias. E ben, ne manca pas de libres. Se bolega l'Occitania.</p>
+                <p>Podèm anar dins una librariá per crompar qualques libres occitans.</p>
+            </div>
+        </div>
+
+        <h2 class="entry-date">Quaranta cinquena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>pèira</hl>: pierre
+                    </li>
+                    <li>
+                        <hl>talhats</hl>: taillés
+                    </li>
+                    <li>
+                        <hl>seguissètz-me</hl>: suivez-moi
+                    </li>
+                    <li>
+                        <hl>un brau</hl>: un jeune taureau
+                    </li>
+                    <li>
+                        <hl>l'estanh</hl>: l'étang
+                    </li>
+                    <li>
+                        <hl>agradiva</hl>: agréable
+                    </li>
+                </ul>
+                <p>Lo dedins val la vista tanben e particulièrament las tampissarias ancianas.</p>
+                <p>Los anam seguir, perqué van en Camarga.</p>
+                <p>Per una chança, n'avèm una de brava.</p>
+            </div>
+        </div>
+
+        <h2 class="entry-date">Quaranta quatrena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>cloquièr</hl>: clocher
+                    </li>
+                    <li>
+                        <hl>aquò's quicòm</hl>: c'est quelque chose
+                    </li>
+                    <li>
+                        <hl>aculhirà</hl>: accueillera
+                    </li>
+                    <li>
+                        <hl>dèmia</hl>: académie
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <h2 class="entry-date">Quaranta tresena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>garit</hl>: guéri
+                    </li>
+                    <li>
+                        <hl>tropelon de fedas</hl>: troupeau de brebis
+                    </li>
+                    <li>
+                        <hl>un rocàs</hl>: un rocher
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="entry-date"> Quaranta unena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>estrifada</hl>: déchiquetée
+                    </li>
+                    <li>
+                        <hl>pòble</hl>: peuple
+                    </li>
+                    <li>
+                        <hl>contunhavan</hl>: ont continué
+                    </li>
+                    <li>
+                        <hl>de pertot tornamai</hl>: de partout à nouveau
+                    </li>
+                    <li>
+                        <hl>tornen viure</hl>: revient
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="entry-date">Quarantena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>eretgia</hl>: hérésie
+                    </li>
+                    <li>
+                        <hl>roinar</hl>: ruiner
+                    </li>
+                    <li>
+                        <hl>roge de sang</hl>: rouge de sang
+                    </li>
+                    <li>
+                        <hl>liurer</hl>: livrer
+                    </li>
+                    <li>
+                        <hl>moriguèron</hl>: moururent
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="entry-date">Trenta novena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>te cobriguères</hl>: t'es couvert
+                    </li>
+                    <li>
+                        <hl>fèbre</hl>: fièvre
+                    </li>
+                    <li>
+                        <hl>vau quèrre</hl>: vais chercher
+                    </li>
+                    <li>
+                        <hl>malaut</hl>: malade
+                    </li>
+                    <li>
+                        <hl>al reveire</hl>: au revoir
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="box", style="text-align: center;">
+                <i><hl>Filandreu</hl> de vita - Benedicta Bonet</i> <br>
+                <br>Lo solelh a raiat
+                <br>Entre doas <hl>nibles</hl>,
+                <br>Lo solelh m'a parlat
+                <br>Era quo un <hl>raibe</hl> ?
+                <br>Me coijei dins la tauvera
+                <br>A l'ombra d'un <hl>tantaridier</hl>,
+                <br>Lo corps desplejat
+                <br>Sur un liech de tranuja,
+                <br>Dins la sentor de la prima.
+                <br><hl>M'es d'eivís</hl> que m'endurmia,
+                <br>Quand tot d'un còp,
+                <br>Un quauquaren obludat
+                <br>Me remudava las tripas;
+                <br>Era quò lo bonur
+                <br>Que frotjava en me ?
+                <br>L'envia de viure me tornava
+                <br>Mai prunda que jamai...
+                <br>Auria tant volgut per totjorn
+                <br>Demorar <hl>entau</hl>.
+            </div>
+        </div>
+
+
+
+        <h2 class="entry-date">Trentena uechena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>un pauc pus luènh</hl>: un peu plus loin
+                    </li>
+                    <li>
+                        <hl>puèg</hl>: hauteur
+                    </li>
+                    <li>
+                        <hl>cap al cèl</hl>: vers le ciel
+                    </li>
+                    <li>
+                        <hl>cobrir</hl>: refaire
+                    </li>
+                    <li>
+                        <hl>roïna</hl>: ruine
+                    </li>
+                    <li>
+                        <hl>en passant sul pontent</hl>: en passant sur le petit point
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <h2 class="entry-date">Trentena setena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>cartas postalas</hl>: cartes postales
+                    </li>
+                    <li>
+                        <hl>taula</hl>: table
+                    </li>
+                    <li>
+                        <hl>bloda</hl>: blouse
+                    </li>
+                    <li>
+                        <hl>esclòps</hl>: sabots
+                    </li>
+                    <li>
+                        <hl>capèl negre</hl>: chapeau noir
+                    </li>
+                    <li>
+                        <hl>mandar</hl>: envoyer
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="entry-date">Trentena seisena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>botelha d'aiga</hl>: bouteille d'eau
+                    </li>
+                    <li>
+                        <hl>correires</hl>: coureurs
+                    </li>
+                    <li>
+                        <hl>païsatges</hl>: paysages
+                    </li>
+                    <li>
+                        <hl>calfa</hl>: chauffe
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <h2 class="entry-date">Trentena quatrena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>Lorda</hl>: Lourdes
+                    </li>
+                    <li>
+                        <hl>une glèisa</hl>: une église
+                    </li>
+                    <li>
+                        <hl>se'n planhisson</hl>: s'en plaignent (regrettent)
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <h2 class="entry-date">Trentena tresena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>miègjorn</hl>: midi
+                    </li>
+                    <li>
+                        <hl>cotèl</hl>: couteau
+                    </li>
+                    <li>
+                        <hl>patanas</hl>: pommes de terre
+                    </li>
+                    <li>
+                        <hl>carn dins la padena</hl>: viande dans la poêle
+                    </li>
+                    <li>
+                        <hl>fromatge</hl>: fromage
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="entry-date">Trenta dosena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>madomaisèla</hl>: mademoiselle
+                    </li>
+                    <li>
+                        <hl>parisenca</hl>: parisienne
+                    </li>
+                    <li>
+                        <hl>òc-ben</hl>: oui, vraiment
+                    </li>
+                    <li>
+                        <hl>un toston de burre e de mèl</hl>: une tartine de beurre et de miel
+                    </li>
+                    <li>
+                        <hl>borièra</hl>: fermière
+                    </li>
+                    <li>
+                        <hl>i a bèl brieu que lo solelh lusis</hl>: il y a beau temps que le soleil brille
+                    </li>
+                    <li>
+                        <hl>puèi</hl>: ensuite
+                    </li>
+                    <li>
+                        <hl>ausiguèri</hl>: j'ai entendu
+                    </li>
+                    <li>
+                        <hl>cambajon</hl>: jambon
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="entry-date">Trenta unena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>armari</hl>: armoire
+                    </li>
+                    <li>
+                        <hl>tot nòu</hl>: tout neuve
+                    </li>
+                    <li>
+                        <hl>cabineton</hl>: petit armoire regionale
+                    </li>
+                    <li>
+                        <hl>pr'amor de</hl>: à cause de
+                    </li>
+                    <li>
+                        <hl>èspert</hl>: expert
+                    </li>
+                    <li>
+                        <hl>es sabentàs</hl>: es savent
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <h2 class="entry-date">Trentena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>bòria</hl>: ferme
+                    </li>
+                    <li>
+                        <hl>soi vengut</hl>: je suis venu
+                    </li>
+                    <li>
+                        <hl>aladonc</hl>: donc
+                    </li>
+                    <li>
+                        <hl>me balhèsses pas d'aiga, mas d'aigardent</hl>: ne me donne pas de l'eu, mais de l'eau de vie
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <h2 class="entry-date">Vint-e-novena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>mòbles</hl>: meubles
+                    </li>
+                    <li>
+                        <hl>a drecha</hl>: à droite
+                    </li>
+                    <li>
+                        <hl>son boès es plan dur</hl>: son bois est très dur
+                    </li>
+                    <li>
+                        <hl>los autisses</hl>: les outils
+                    </li>
+                    <li>
+                        <hl>fuèlhas</hl>: feuilles
+                    </li>
+                    <li>
+                        <hl>pials</hl>: cheveux
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="entry-date">Vint-e-uechena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        diluns, luns
+                    </li>
+                    <li>
+                        dimarç, març
+                    </li>
+                    <li>
+                        dimècres, mècres
+                    </li>
+                    <li>
+                        dijòus, jòus
+                    </li>
+                    <li>
+                        divendres, vendres
+                    </li>
+                    <li>
+                        dissabte, sabte
+                    </li>
+                    <li>
+                        dimenge, dimèrgues
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="entry-date">Vint-e-setena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>sartre</hl>: tailleur
+                    </li>
+                    <li>
+                        <hl>son en cuèr</hl>: sont en cuir
+                    </li>
+                    <li>
+                        <hl>agacha aquela</hl>: regarde celle-là
+                    </li>
+                    <li>
+                        <hl>pus simpla</hl>: plus discrète
+                    </li>
+                    <li>
+                        <hl>quant vos devi</hl>: combien vous dois-je
+                    </li>
+                    <li>
+                        <hl>mossur</hl>: monsieur
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <h2 class="entry-date">Vint-e-seisena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>uòus</hl>: œufs
+                    </li>
+                    <li>
+                        <hl>fogassa</hl>: fouace
+                    </li>
+                    <li>
+                        <hl>papeta</hl>: grand-père
+                    </li>
+                    <li>
+                        <hl>mameta</hl>: grand-mère
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="entry-date">Vint-e-cinquena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>diriam</hl>: on dirait
+                    </li>
+                    <li>
+                        <hl>deu voler</hl>: il doit
+                    </li>
+                    <li>
+                        <hl>maduras</hl>: mûres
+                    </li>
+                    <li>
+                        <hl>la frucha</hl>: les freuit
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <h2 class="entry-date">Vint-e-quatrena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>lo rasim</hl>: le raisin
+                    </li>
+                    <li>
+                        <hl>la prada</hl>: la prairie
+                    </li>
+                    <li>
+                        <hl>que tan nautas son</hl>: qui sont si hautes
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <h2 class="entry-date">Vint-e-tresena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>ier sul ser</hl>: heir sur (vers) le soir
+                    </li>
+                    <li>
+                        <hl>degun</hl>: personne
+                    </li>
+                    <li>
+                        <hl>en rota pel païs del vin</hl>: en route pour le pays du vin
+                    </li>
+                    <li>
+                        <hl>ailà</hl>: là-bas
+                    </li>
+                    <li>
+                        <hl>vej'aqui</hl>: voici
+                    </li>
+                    <li>
+                        <hl>salsissòt</hl>: saucisson
+                    </li>
+                    <li>
+                        <hl>aucelons</hl>: oiseaux
+                    </li>
+                    <li>
+                        <hl>en trabalhant</hl>: en travaillant
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <h2 class="entry-date">Vint-e-dosena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>uèi que ploù</hl>: aujourd'hui, comme il pleut
+                    </li>
+                    <li>
+                        <hl>conta-nos</hl>: raconte-nous
+                    </li>
+                    <li>
+                        <hl>una vertadièra</hl>: un véritable (une vraie)
+                    </li>
+                    <li>
+                        <hl>li respondi</hl>: je lui réponds
+                    </li>
+                    <li>
+                        <hl>es tot drech</hl>
+                    </li>
+                    <li>
+                        <hl>vos prometi que se'n vendriá de drògas</hl>: je vous assure qu'il s'en vendrait des drogues
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="entry-date">Vint-e-unena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        mon, ton, son, ma, ta, sa
+                    </li>
+                    <li>
+                        lo mieu, lo tieu, lo sieu, la miá, la tiá, la siá
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="entry-date">Vintena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>cresiái</hl>: croyais
+                    </li>
+                    <li>
+                        <hl>s'acabariá</hl>: se finirait
+                    </li>
+                    <li>
+                        <hl>blat</hl>: blé
+                    </li>
+                    <li>
+                        <hl>lo pastre e lo sieu can</hl>: le berger et son chien
+                    </li>
+                    <li>
+                        <hl>la ciutat</hl>: la cité
+                    </li>
+                    <li>
+                        <hl>ara trona</hl>: maintenant il tonne
+                    </li>
+                    <li>
+                        <hl>dintrar</hl>: rentrer
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <h2 class="entry-date">Dètz-e-novena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>cadun</hl>: chacun
+                    </li>
+                    <li>
+                        <hl>accordança perfiècha</hl>: harmonie parfait
+                    </li>
+                    <li>
+                        <hl>al prèp</hl>: auprè
+                    </li>
+                    <li>
+                        <hl>sol permetià d'aténher</hl>: seul permettait d'atteindre
+                    </li>
+                    <li>
+                        <hl>lo gaug</hl>: la joie
+                    </li>
+                    <li>
+                        <hl>luchèron</hl>: ont lutté
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="entry-date">Dètz-e-uechena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>la vila ont lusiguèt bèl temps</hl>: la ville où brilla jadis
+                    </li>
+                    <li>
+                        <hl>l'arma</hl>: l'âme
+                    </li>
+                    <li>
+                        <hl>Foguèt</hl>: ce fut
+                    </li>
+                    <li>
+                        <hl>romieus</hl>: pèlerins
+                    </li>
+                    <li>
+                        <hl>caps-d'òbra</hl>: chefs-d'œuvre
+                    </li>
+                    <li>
+                        <hl>carrièra</hl>: rue
+                    </li>
+                    <li>
+                        <hl>aprèp aver</hl>: après avoir
+                    </li>
+                    <li>
+                        <hl>avant d'anar sopar</hl>: avant d'aller souper (diner)
+                    </li>
+                    <li>
+                        <hl>o doblides pas</hl>: ne l'oublie pas
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <h2 class="entry-date">Dètz-e-setena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>lo sieu principi primie1r</hl>: son principe premier
+                    </li>
+                    <li>
+                        <hl>caliâ èstre nòble</hl>: il fallait être noble
+                    </li>
+                    <li>
+                        <hl>se caldrà levar d'ora</hl>: il fautdra se lever d'heure (de bonne heure)
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <h2 class="entry-date">Setzena leiçon </h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>créisser</hl>: croître
+                    </li>
+                    <li>
+                        <hl>un òme e una femna</hl>: un homme et une femme
+                    </li>
+                    <li>
+                        <hl>eiretar</hl>: hériter
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+
+        <h2 class="entry-date">Quinzena leiçon </h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>èran</hl>: étaient
+                    </li>
+                    <li>
+                        <hl>foligaud</hl>: superficiel
+                    </li>
+                    <li>
+                        <hl>visquèron subretot</hl>: vécurent surtout
+                    </li>
+                    <li>
+                        <hl>an creat e espandit</hl>: ont crée et répandu
+                    </li>
+                    <li>
+                        <hl>dardalhèt</hl>: rayonée
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="entry-date"> Catorzena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>aimèri legir</hl>: j'ai aimé, j'aimai lire
+                    </li>
+                    <li>
+                        <hl>aimèt dançar</hl>: il a aimé, il aima
+                    </li>
+                    <li>
+                        <hl>aimèron dançar</hl>: ils ont aimé, ils aimèrent danser
+                    </li>
+                    <li>
+                        <hl>aimèri legir</hl>: j'ai aimé, j'aimai lire
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="entry-date">Tresena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>que sètz longanhos</hl>: que vous êtes loungagnes (vous ne finissez plus)
+                    </li>
+                    <li>
+                        <hl>es acabada</hl>: elle est finie
+                    </li>
+                    <li>
+                        <hl>prendrem a man esquèrra</hl>: nous prendrons à main gauche
+                    </li>
+                    <li>
+                        <hl>aviatz ja vist</hl>: aviez déjà vu
+                    </li>
+                    <li>
+                        <hl>ailà</hl>: là-bas
+                    </li>
+                    <li>
+                        <hl>l'auçada de la montanha</hl>: la hauteur de la montagne
+                    </li>
+        </div>
+
+
+        <h2 class="entry-date">Dotzena leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>Ai convidat</hl>: j'ai invité
+                    </li>
+                    <li>
+                        <hl>coma dins lo temps</hl>: comme autrefois
+                    </li>
+                    <li>
+                        <hl>los borruts e los cappelats</hl>: les velus et les chauves
+                    </li>
+                    <li>
+                        <hl>castanhado</hl>: flambée
+                    </li>
+                    <li>
+                        <hl>s'i assète dessus</hl>elle s'asseye dessus
+                    </li>
+                    <li>
+                        <hl>las anam poder manjar</hl>: nous allons pouvoir les manger
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <h2 class="entry-date"> Onzena leiçon </h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>Dintrem</hl>: entrons
+                    </li>
+                    <li>
+                        <hl>gaita</hl>: regarde
+                    </li>
+                    <li>
+                        <hl>lièches</hl>: lits
+                    </li>
+                </ul>
+            <p> Fustatge tanben: <i>fusatché</i></p>
+            <p>Le fuòc de lenha dins la chaminèia, es l'arma de l'ostal. <i> tchaminèyo, lényo</i></p>
+            </div>
+        </div>
+
+
+        <h2 class="entry-date">Desena leiçon </h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl> novèl ostal</hl>: nouvelle maison
+                    </li>
+                    <li>
+                        <hl>bastit</hl>: bâtie
+                    </li>
+                    <li>
+                        <hl>parets espessas</hl>: cloisons épais
+                    </li>
+                    <li>
+                        <hl>invern, estiu</hl>: hiver, été
+                    </li>
+                    <li>
+                        <hl>nautas</hl>: hautes
+                    </li>
+                </ul>
+                <p> Sus la teulada a doás aigas i a pas de canjagut; seriá contrari a l'estil del païs. <i> Sus la téoulado a douoz ayguous, y o pas dé ka djagut; séryo kountrari a l'éstil dél païs. </i> </p>
+            </div>
+        </div>
+
+
+        <h2 class="entry-date"> Novena leiçou </h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>aqueste</hl>: cette
+                    </li>
+                    <li>
+                        <hl>pas brica</hl>: pas du tout
+                    </li>
+                    <li>
+                        <hl>degun</hl>: personne
+                    </li>
+                    <li>
+                        <hl>De còps</hl>: parfois
+                    </li>
+                </ul>
+                <p>Amb un professor. <i>abé prouféssou</i></p>
+                <p>I a pas que los punts que despassan dètz que comptan. <i>puns ké déspasson dèts ké kounton</i></p>
+                <p>Un pichon tèxte <i>un pitcho tésté</i></p>
+                <p>Nos pausa de questions <i>nou pauzo dé késtyous</i></p>
+                <p>Un pauc paur <i>un paou pòou</i></p>
+            </div>
+        </div>
+
+
+        <h2 class="entry-date"> Ochena leiçou</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>kerré</hl>: chercher
+                    </li>
+                    <li>
+                        <hl>daissarai</hl>: lasserai
+                    </li>
+                    <li>
+                        <hl>trapar un autre canton</hl>: trouver un autre coin
+                    </li>
+                    <li>
+                        <hl>Baste l'ajan pas mancat</hl>: pourvu qu'ils ne l'aient pas manqué
+                    </li>
+                    <li>
+                        <hl>davalan ailà</hl>: déscendent là-bas
+                    </li>
+                    <li>
+                        <hl>ajudar</hl>: aider
+                    </li>
+                </ul>
+                <p>Voldriái ben saber a quina ora arribaran. <i>bouldryoy bé sabé a kinourarribaran</i></p>
+                <p>Despacha-te de te preparar, se volèm pas èstre en retar. <i>boulèn</i></p>
+                <p>Baste l'ajan <i>basté l'adjon</i></p>
+            </div>
+        </div>
+
+        <h2 class="entry-date"> Seisena leiçou </h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li> 
+                        <hl>
+                            Cal èstre fièr
+                        </hl>: il faut etre fier
+                    </li>
+                    <li>
+                        <hl>soun calucs</hl>: ils sont fous
+                    </li>
+                    <li>
+                        <hl>aital</hl>: ainsi
+                    </li>
+                </ul>
+                <p>
+                    Son calucs! <i> soun kaluts</i>
+                </p>
+
+                <p>Vos serà pas pus posisble de vos passar d'aquels tresaurs. <i>poussiplé, dakés, trézaous</i></p>
+            </div>
+        </div>
+
+        <h2 class="entry-date">Cinquena leiçou</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>Uèi</hl>: today
+                    </li>
+                    <li>
+                        <hl>se n'escriu</hl>: s'en ecrit-il
+                    </li>
+                    <li>
+                        <hl>per segur</hl>: bien sûr
+                    </li>
+                    <li>
+                        <hl>escriches</hl>: écrits
+                    </li>
+                    <li>
+                        <hl>cada jorn</hl>: chaque jour
+                    </li>
+                    <li>
+                        <hl>I a</hl>: il y a
+                    </li>
+                    
+
+                </ul>
+                <p>Las escòlos, los licèus, e las facultats <i>laz éskolos, louz lissèous, é las fakultats</i></p>
+            </div>
+        </div>
+
+        <h2 class="entry-date">Quatrena leiçou </h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>banhada</hl>: bagnée
+                    </li>
+                    <li>
+                        <hl>un paou pus luèn</hl>: un peux plus loin
+                    </li>
+                </ul>
+                <p>Es una region fòrça bèla, banhada de solelh, qu'anam descobrir ensemble. <i> éz uno rédjyou forso bèlo, banhado de soulel, kanan déskoubri énsémblé.</i></p>
+                <p>Va de Bordèu a Niça e mai un pau pus luènh. <i> bourdèou a nisso e may un paou pus luèn</i></p>
+                <p>Va dels Pirenèus gaireben dusqu'à Lèira. Anatz lèu poder visitar tot aquò. <i> Dél sut al nor, pirénèous gayrébé, anas lèou poudé bizita toutako.</i></p>
+            </div>
+        </div>
+
+        <h2 class="entry-date"> Tresena leiçou</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>benlèu</hl>: peut-être
+                    </li>
+                    <li>
+                        <hl>cantavan</hl>: chantaient
+                    </li>
+                </ul>
+                <p>Voldriài plan lo conéisser? <i>bouldryoy</i></p>
+                <p>Son nom es Guilhèm, comte de Peitieus e duc d'Aquitània. <i>soun noun, kounté dé péytyéou</i></p>
+                <p>Visquèt a la fin del sègle onzen e al començament del ségle dotzen. <i> Biskèt a la fi dèl séklé oundzén e al kou-mén-so-mén dél sèklé doutzén.</i></p>
+                <p>O descobriretz dins qualques leiçons. <i>kalkés léyssous</i></p>
+                
+            </div>
+        </div>
+
+        <h2 class="entry-date">Segonda leiçon </h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>agradiu</hl>: agréable
+                    </li>
+                    <li>
+                        <hl>amb</hl>: avec
+                    </li>
+                    <li>
+                        <hl>per segur</hl>: bien sur
+                    </li>
+                    <li>
+                        <hl>poiretz legir</hl>: pourrez lire
+                    </li>
+                </ul>
+                <p> Òc: quand parlam occitan dins lo païs del solelh, tot va plan. <i>ò:kam, outsita, païs dél soulél, tou(b) ba pla</i> </p>
+                <p>La parlar vos serà agradiu, donc facil. <i> la parla bous séra agradiu, dounk fassil</i></p>
+                <p>Explicatz-me! <i>ésplikas mé!</i></p>
+                <p> Es la lenga dels Trobadors, que lor civilisacion èra fondada sus l'Amor. <i> lour ci-bi-li-za-ssyou èro fond<b>a</b>do su l'amour</i></p>
+                <p>Mas amb qualques diferéncias; lèou, poiretz legir lors poëmas, se legissètz regulièrament las leiçons. <i>maz abé kalkés diférénsyos, lèou, pouyrès lédji lours pouèmos, sé lédjissés régulyèromén las léyssous</i></p>
+            </div>
+        </div>
+
+        <h2 class="entry-date">Primèra leiçon</h2>
+        <div class="entry">
+            <div class="box">
+                <ul>
+                    <li>
+                        <hl>mièdj<b>o</b>rn</hl>: midi
+                    </li>
+                    <li>
+                        <hl>de mai</hl>: de plus
+                    </li>
+                    <li>
+                        <hl>dempu<b>è</b>i qu<b>o</b>ra</hl>: depuis quand
+                    </li>
+                </ul>
+                Dempuèi l'epòca dels Trobardors; veirem tot aquò dins qualques leiçons. <i>Trouboad<b>ou</b>s, tout ako din, kalkés</i>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

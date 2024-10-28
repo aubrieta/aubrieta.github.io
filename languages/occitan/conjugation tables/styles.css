@@ -1,0 +1,92 @@
+body {
+    font-family: 'Doulos SIL', 'Palatino', serif;
+    background-color: #f3e9dd;
+    margin: 0;
+    color: #654321;
+    line-height: 1.5;
+    /* text-align: center; */
+}
+
+.content {
+    width: 80%;
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+/* Soft highlight class */
+.hl {
+    background-color: rgb(247, 225, 225); /* Slightly darker than the background */
+    padding: 3px 6px;
+    border-radius: 8px;
+    color: #654321; /* Same text color */
+}
+
+.title-container h1 {
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.entry {
+    margin-bottom: 30px;
+}
+
+.entry-date {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #fbf5ee;
+    border-radius: 20px;
+    font-size: 1.1em;
+    /* font-weight: bold; */
+    color: #654321;
+    margin-bottom: 15px;
+}
+
+.box {
+    padding: 15px;
+    background-color: #fbf5ee;
+    border-radius: 8px;
+}
+/* Pronunciation section */
+.pronunciation {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.ipa {
+    font-family: 'Doulos SIL', serif;
+    background-color: #f7e5e1;
+    padding: 3px 6px;
+    border-radius: 6px;
+}
+
+/* Conjugation table */
+.conjugation {
+    margin-top: 20px;
+}
+
+.conjugation table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.conjugation th, .conjugation td {
+    border: 1px solid #d1c4b1;
+    padding: 8px;
+    text-align: center;
+    background-color: #fbf5ee;
+}
+
+.conjugation th {
+    font-weight: bold;
+}
+
+/* Example sentences */
+.examples {
+    margin-top: 20px;
+}
+
+.examples p {
+    font-size: 1.1em;
+    color: #654321;
+}
