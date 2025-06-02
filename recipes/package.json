@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0"
+  },
+  "scripts": {
+    "watch": "chokidar 'markdown/*.md' -c 'node convert.js'",
+    "convert": "node convert.js"
+  }
+}
