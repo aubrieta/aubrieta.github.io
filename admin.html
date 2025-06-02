@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Recipe Admin Form</title>
+  <style>
+    body {
+      font-family: 'Palatino', serif;
+      background-color: #f3e9dd;
+      color: #654321;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      margin-bottom: 1rem;
+    }
+    label, input, textarea, select, button {
+      display: block;
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+      width: 100%;
+    }
+    .group {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      background-color: #fff8f0;
+    }
+    .ingredient {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .ingredient input {
+      flex: 1;
+    }
+    button {
+      background-color: #d2c0a8;
+      color: #654321;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #c0ac91;
+    }
+    pre {
+      background: #fff8f0;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 2rem;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>Add New Recipe (Markdown)</h1>
+
+  <label for="title">Title</label>
+  <input type="text" id="title" placeholder="e.g. White Chocolate Matcha Cookies" />
+
+  <label for="category">Category</label>
+  <select id="category">
+    <option value="">— Select —</option>
+    <option value="entree">Entrée</option>
+    <option value="dessert">Dessert</option>
+    <option value="appetizer">Appetizer</option>
+    <option value="sauce">Sauce</option>
+    <option value="drink">Drink</option>
+  </select>
+
+  <label for="subcategory">Subcategory</label>
+  <input type="text" id="subcategory" placeholder="e.g. Sandwich, Cookie" />
+
+  <div id="ingredient-groups"></div>
+  <button onclick="addGroup()">+ Add Ingredient Group</button>
+
+  <label for="steps">Steps (one per line)</label>
+  <textarea id="steps" rows="6" placeholder="e.g. Preheat oven to 350°F..."></textarea>
+
+  <button onclick="generateMarkdown()">Generate Markdown</button>
+  <pre id="output"></pre>
+
+  <script>
+    function addGroup() {
+      const container = document.createElement('div');
+      container.className = 'group';
+      container.innerHTML = `
+        <label>Group Label</label>
+        <input type="text" placeholder="e.g. Dough" class="group-label">
+        <div class="ingredients"></div>
+        <button type="button" onclick="addIngredient(this)">+ Add Ingredient</button>
+      `;
+      document.getElementById('ingredient-groups').appendChild(container);
+    }
+
+    function addIngredient(button) {
+      const ingredientsDiv = button.previousElementSibling;
+      const div = document.createElement('div');
+      div.className = 'ingredient';
+      div.innerHTML = `
+        <input placeholder="name">
+        <input placeholder="quantity">
+        <input placeholder="note (optional)">
+        <input placeholder="type (optional)">
+      `;
+      ingredientsDiv.appendChild(div);
+    }
+
+    function generateMarkdown() {
+      const title = document.getElementById('title').value.trim();
+      const category = document.getElementById('category').value.trim();
+      const subcategory = document.getElementById('subcategory').value.trim();
+      const steps = document.getElementById('steps').value.trim().split('\n').filter(s => s);
+
+      const groups = Array.from(document.querySelectorAll('.group')).map(group => {
+        const label = group.querySelector('.group-label').value.trim();
+        const items = Array.from(group.querySelectorAll('.ingredient')).map(row => {
+          const inputs = row.querySelectorAll('input');
+          const name = inputs[0].value.trim();
+          const quantity = inputs[1].value.trim();
+          const note = inputs[2].value.trim();
+          const type = inputs[3].value.trim();
+          const item = { name };
+          if (quantity) item.quantity = quantity;
+          if (note) item.note = note;
+          if (type) item.type = type;
+          return item;
+        }).filter(i => i.name);
+        return { label, items };
+      });
+
+      let md = '---\n';
+      md += `title: ${title}\n`;
+      if (category) md += `category: ${category}\n`;
+      if (subcategory) md += `subcategory: ${subcategory}\n`;
+      md += 'ingredientGroups:\n';
+      for (const group of groups) {
+        md += `  - label: ${group.label || ''}\n    items:\n`;
+        for (const item of group.items) {
+          md += `      - name: ${item.name}\n`;
+          if (item.quantity) md += `        quantity: ${item.quantity}\n`;
+          if (item.note)     md += `        note: ${item.note}\n`;
+          if (item.type)     md += `        type: ${item.type}\n`;
+        }
+      }
+      md += 'steps:\n';
+      for (const step of steps) {
+        md += `  - ${step}\n`;
+      }
+      md += '---';
+
+      document.getElementById('output').textContent = md;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+/* === Global Layout === */
+body {
+    background-color: #f3e9dd;
+    font-family: 'Palatino', serif;
+    color: #654321;
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #recipes-container {
+    width: 100%;
+    max-width: 900px;
+  }
+  
+  /* === Container Layout === */
+  .recipe-card {
+    background-color: #fbf5ee;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 3rem;
+    border: 1px solid rgba(101, 67, 33, 0.1);
+  }
+  
+  .recipe-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  
+  .ingredients-column {
+    flex: 0 0 320px;
+    min-width: 280px;
+    padding-right: 1rem;
+    border-right: 1px solid rgba(101, 67, 33, 0.2);
+  }
+  
+  .instructions-column {
+    flex: 1;
+  }
+  
+  /* === Typography === */
+  h1, h2, h3, h4 {
+    margin-bottom: 1rem;
+    color: #4e351a;
+    font-weight: normal;
+  }
+  
+  ol {
+    padding-left: 1.25rem;
+  }
+  
+  li {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* === Ingredient Items === */
+  .ingredient-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  /* === Varied Pastel Tags === */
+  .quantity {
+    background-color: rgb(244, 224, 235); /* pastel lavender */
+    color: rgb(72, 10, 62);
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: normal;
+  }
+  
+  .name-tag {
+    background-color: #ffe9b2; /* soft peach */
+    color: #5c3c1a;
+    font-size: 0.85rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: normal;
+    transition: transform 0.1s ease, background-color 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .name-tag:hover {
+    background-color: #f0d3af;
+    transform: scale(1.05);
+    box-shadow: 0 0 0 2px rgba(92, 60, 26, 0.1);
+  }
+  
+  .meta-tag {
+    background-color: rgb(210, 220, 241); /* pastel mint */
+    color: #2f5b4f;
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: normal;
+    white-space: nowrap;
+  }
+  
+  /* === Ingredient Reference in Instructions === */
+  .ingredient-ref {
+    background-color: rgb(255, 231, 235); /* warm yellow */
+    color: #5e4522;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: normal;
+  }
+  
+  .highlight {
+    background-color: #c1dffb !important;
+  }
+  
+  /* === Back to Recipes Link === */
+  a {
+    text-decoration: none;
+    color: rgb(56, 138, 225);
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    transition: color 0.2s ease;
+  }
+  a:visited {
+    color: rgb(56, 138, 225);
+    text-decoration: none;
+  }
+  a, a:visited, a:hover, a:active, a:focus {
+    color: rgb(56, 138, 225);
+    text-decoration: none !important;
+  }
+  
+  
+  a:hover {
+    color: #6894cd;
+  }
+  
+  /* === Responsive === */
+  @media (max-width: 768px) {
+    .recipe-grid {
+      flex-direction: column;
+    }
+  
+    .ingredients-column {
+      border-right: none;
+      padding-right: 0;
+    }
+  
+    #recipes-container {
+      padding: 0 1rem;
+    }
+  }
+  
+
+  #recipes-container h2 {
+    margin-top: 2rem;
+    padding-bottom: 0.25rem;
+    color: #654321;
+    font-size: 1.3rem;
+  }
+  
