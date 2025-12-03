@@ -8,6 +8,20 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var swaps = document.querySelectorAll(".hover-swap");
+    
+      swaps.forEach(function (el) {
+        el.addEventListener("click", function () {
+          // toggle the "hovered" state on tap/click
+          el.classList.toggle("is-hovered");
+        });
+      });
+    });
+    </script>    
+
 <body>
     <div class="container">
         <img src="images/reflective_cat.JPG" alt="A reflective cat in North Berkeley." class="right-aligned">

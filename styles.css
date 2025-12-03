@@ -97,3 +97,13 @@ a {
 .hover-swap:hover .hover-text {
     display: inline;
 }
+
+@media (hover: hover) and (pointer: fine) {
+    .hover-swap:hover .normal-text {
+        display: none;
+    }
+
+    .hover-swap:hover .hover-text {
+        display: inline;
+    }
+}
