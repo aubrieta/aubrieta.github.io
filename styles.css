@@ -28,13 +28,17 @@ img.right-aligned {
 
 p.left-justified {
     text-align: justify;
-    margin-bottom: 20px; /* Increase bottom margin for paragraph spacing */
-    font-size: 16px; /* Set font size relative to viewport width */
+    margin-bottom: 20px;
+    font-size: 16px;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .math-text {
-    font-size: 30px; /* Adjust font size for the math expression */
-    font-style: italic; /* Optional: Set italic style */
+    font-size: 30px;
+    font-style: italic;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 a {
@@ -44,4 +48,52 @@ a {
     background-color: rgba(210, 192, 168, 0.5); /* Highlight color */
     border-radius: 5px; /* Rounded corners */
     transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+@media (max-width: 900px) {
+    .container {
+        width: 40%;  /* give yourself a bit more room */
+    }
+
+    img.right-aligned {
+        float: none;
+        display: block;
+        margin: 0 auto 20px auto;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    p.left-justified {
+        text-align: left;
+        width: 100%;
+        font-size: 15px;
+    }
+}
+
+.fake-link {
+    text-decoration: none;
+    color: #654321;
+    padding: 2px 2px;
+    background-color: rgba(210, 192, 168, 0.5);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hover-swap {
+    /* keep it inline so it wraps with the paragraph and around floats */
+    display: inline;
+}
+
+/* default state: show normal text, hide hover text */
+.hover-swap .hover-text {
+    display: none;
+}
+
+/* on hover: hide normal, show hover */
+.hover-swap:hover .normal-text {
+    display: none;
+}
+
+.hover-swap:hover .hover-text {
+    display: inline;
 }
