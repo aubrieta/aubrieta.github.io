@@ -32,6 +32,8 @@ p.left-justified {
     font-size: 16px;
     word-break: break-word;
     overflow-wrap: break-word;
+    line-height: 1.8;
+
 }
 
 .math-text {
