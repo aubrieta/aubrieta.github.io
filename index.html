@@ -6,53 +6,58 @@
     <title>aubrieta</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260527">
 </head>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var swaps = document.querySelectorAll(".hover-swap");
-    
-      swaps.forEach(function (el) {
-        el.addEventListener("click", function () {
-          el.classList.toggle("is-hovered");
-        });
-      });
-    });
-    </script>    
-
 <body>
-    <div class="container">
-        <img src="images/reflective_cat.JPG" alt="A reflective cat in North Berkeley." class="right-aligned">
+    <main class="page-shell">
+        <section class="intro" aria-labelledby="intro-heading">
+            <div class="intro-copy">
+                <p class="kicker">aubrieta</p>
+                <h1 id="intro-heading">Hi, I'm Drisana.</h1>
+                <p class="lede">
+                    I'm a fourth-year undergraduate at UC Berkeley on track to graduate in May 2026.
+                    In the fall, I'll be starting a PhD at Brown University.
+                </p>
+            </div>
 
-        <p class="left-justified">
-            Hi, I'm Drisana!
-        </p>
-        <p class="left-justified">
-            I'm a fourth-year undergraduate at UC Berkeley on track to graduate in May 2026. Go bears! 
-        </p>
-        <p class="left-justified">
-            In the fall, I'll be starting a PhD at Brown University. Go bears!
-        </p>
-        <p class="left-justified">
-            Over the summer, I'll be visiting the Department of Computer Science at L'Ecole Polytechnique in Palaiseau. 
-        </p>
-        <p class="left-justified">
-            I was born in Ohio, but I've spent most of my life in <a href="https://www.youtube.com/watch?v=dCer2e0t8r8">California</a>.
-        </p>
-        <p class="left-justified">
-            I'm broadly interested in 
-            <span class="fake-link hover-swap">
-                <span class="normal-text">theoretical computer science</span>
-                <span class="hover-text">math pretending to be computer science</span>
-              </span>, especially the theory of cryptography.
-            
-              
-        </p>
-        <p class="left-justified">
-            I also enjoy learning languages and meeting the cats of North Berkeley.
-        </p>
-    </div>
-    
+            <figure class="portrait">
+                <img src="images/reflective_cat.JPG" alt="A reflective cat in North Berkeley.">
+                <figcaption>A reflective cat in North Berkeley.</figcaption>
+            </figure>
+        </section>
+
+        <section class="notes" aria-label="A few notes">
+            <p>
+                Over the summer, I'll be visiting the Department of Computer Science at L'Ecole
+                Polytechnique in Palaiseau.
+            </p>
+            <p>
+                I was born in Ohio, but I've spent most of my life in
+                <a href="https://www.youtube.com/watch?v=dCer2e0t8r8">California</a>.
+            </p>
+            <p>
+                I'm broadly interested in
+                <span class="soft-link hover-swap" tabindex="0">
+                    <span class="normal-text">theoretical computer science</span>
+                    <span class="hover-text">math pretending to be computer science</span>
+                </span>, especially the theory of cryptography.
+            </p>
+            <p>
+                I also enjoy learning languages and meeting the cats of North Berkeley.
+            </p>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var swaps = document.querySelectorAll(".hover-swap");
+
+            swaps.forEach(function (el) {
+                el.addEventListener("click", function () {
+                    el.classList.toggle("is-hovered");
+                });
+            });
+        });
+    </script>
 </body>
 </html>
