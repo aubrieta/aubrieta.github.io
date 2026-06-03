@@ -53,8 +53,16 @@ body::before {
     padding: clamp(36px, 8vw, 96px) 0 clamp(48px, 9vw, 112px);
 }
 
+.page-shell-single {
+    grid-template-columns: minmax(0, 1fr);
+}
+
 .intro {
     display: contents;
+}
+
+.intro-stack {
+    display: block;
 }
 
 .intro-copy {
@@ -128,6 +136,90 @@ h1 {
     padding: 0.72rem 0;
 }
 
+.vita-notes {
+    grid-template-columns: minmax(0, 44rem);
+    padding-top: clamp(24px, 4vw, 42px);
+}
+
+.vita-list {
+    position: relative;
+    margin: 0;
+    padding: 0 0 0 clamp(24px, 4vw, 42px);
+}
+
+.vita-list::before {
+    position: absolute;
+    top: 0.35rem;
+    bottom: 0.35rem;
+    left: 0.38rem;
+    width: 1px;
+    content: "";
+    background: linear-gradient(180deg, rgba(128, 107, 91, 0.38), rgba(128, 107, 91, 0.14));
+}
+
+.vita-entry {
+    position: relative;
+    margin: 0;
+    padding: 0 0 2.1rem 2rem;
+}
+
+.vita-entry:last-child {
+    padding-bottom: 0;
+}
+
+.vita-entry::before {
+    position: absolute;
+    top: 0.45rem;
+    left: -0.06rem;
+    width: 0.9rem;
+    height: 0.9rem;
+    content: "";
+    background: var(--paper);
+    border: 1.5px solid var(--link-bg-hover);
+    border-radius: 999px;
+}
+
+.vita-entry dt,
+.vita-entry dd {
+    margin: 0;
+}
+
+.vita-entry dt {
+    margin-bottom: 0.28rem;
+    color: var(--muted);
+    font-size: 0.88rem;
+    letter-spacing: 0.03em;
+    line-height: 1.45;
+    text-transform: uppercase;
+}
+
+.vita-entry dd {
+    display: grid;
+    gap: 0.28rem;
+}
+
+.vita-role {
+    color: #5d4637;
+    font-size: 1.16rem;
+    line-height: 1.45;
+}
+
+.vita-detail {
+    color: var(--ink);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.vita-detail-muted {
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.vita-note {
+    color: var(--muted);
+    font-size: 0.98em;
+}
+
 a,
 .soft-link {
     color: var(--ink);
@@ -187,6 +279,10 @@ a:focus-visible,
         gap: 26px;
     }
 
+    .intro-stack {
+        display: block;
+    }
+
     h1 {
         max-width: 100%;
     }
@@ -224,5 +320,18 @@ a:focus-visible,
 
     .notes p {
         padding: 0.95rem 0;
+    }
+
+    .vita-list {
+        padding-left: 22px;
+    }
+
+    .vita-entry {
+        padding-left: 1.4rem;
+        padding-bottom: 1.8rem;
+    }
+
+    .vita-role {
+        font-size: 1.08rem;
     }
 }
