@@ -1,0 +1,222 @@
+:root {
+    --list-accent: rgba(228, 196, 83, 0.88);
+    --list-paper: #fffdf8;
+    --list-paper-deep: #f7efe3;
+}
+
+.list-title {
+    max-width: 100%;
+}
+
+.list-lede {
+    max-width: 38rem;
+}
+
+.list-notes {
+    grid-template-columns: minmax(0, 48rem);
+    gap: 1.2rem;
+    padding-top: clamp(24px, 4vw, 36px);
+}
+
+.list-sheet,
+.list-card {
+    position: relative;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.34), transparent 42%),
+        linear-gradient(0deg, rgba(122, 103, 93, 0.03), rgba(122, 103, 93, 0.03)),
+        var(--list-paper);
+    border: 1px solid rgba(117, 98, 84, 0.14);
+    box-shadow: 0 18px 28px -26px var(--shadow);
+}
+
+.list-sheet {
+    padding: clamp(22px, 4vw, 32px);
+}
+
+.list-sheet::before,
+.list-card::before {
+    position: absolute;
+    top: -11px;
+    left: 28px;
+    width: 82px;
+    height: 18px;
+    content: "";
+    background: rgba(241, 231, 214, 0.82);
+    border: 1px solid rgba(181, 157, 129, 0.18);
+    border-radius: 2px;
+    box-shadow: 0 2px 6px rgba(101, 82, 67, 0.08);
+    transform: rotate(-3deg);
+}
+
+.list-sheet-label,
+.list-card-kicker,
+.list-directory-heading,
+.list-header-meta,
+.list-meta {
+    color: var(--muted);
+    font-size: 0.82rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.list-sheet-label {
+    margin: 0 0 1rem;
+}
+
+.list-index-list {
+    display: grid;
+    gap: 0.9rem;
+    margin: 0;
+    padding-left: 1.35rem;
+}
+
+.list-index-list li {
+    padding-left: 0.15rem;
+    color: #5d4637;
+    font-size: 1.08rem;
+    line-height: 1.55;
+}
+
+.list-index-list li::marker {
+    color: #ad8742;
+}
+
+.list-steps {
+    display: grid;
+    gap: 0.8rem;
+    margin: 0;
+    padding-left: 1.35rem;
+}
+
+.list-steps li {
+    padding-left: 0.15rem;
+}
+
+.list-steps li::marker,
+.list-items[data-list-type="ordered"] .list-entry::marker,
+.list-items[data-list-type="unordered"] .list-entry::marker {
+    color: #ad8742;
+    font-weight: 600;
+}
+
+.list-directory {
+    display: grid;
+    gap: 1rem;
+}
+
+.list-directory-heading {
+    margin: 0;
+}
+
+.list-card-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.list-card {
+    padding: 1.25rem 1.15rem 1.15rem;
+}
+
+.list-card h3 {
+    margin: 0.18rem 0 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.list-card p {
+    margin: 0;
+}
+
+.list-card-kicker {
+    margin: 0;
+}
+
+.list-header-meta {
+    margin: 0.9rem 0 0;
+}
+
+.list-page-note {
+    margin: 0 0 1.4rem;
+    padding: 0.95rem 1rem;
+    color: #5d4637;
+    background: var(--list-paper-deep);
+    border-left: 3px solid var(--list-accent);
+}
+
+.list-page-note-paragraph,
+.list-note-paragraph {
+    margin: 0;
+}
+
+.list-page-note-paragraph + .list-page-note-paragraph {
+    margin-top: 0.48rem;
+}
+
+.list-items {
+    display: grid;
+    gap: 1.3rem;
+    margin: 0;
+    padding-left: 1.45rem;
+}
+
+.list-items[data-list-type="unordered"] {
+    list-style: disc;
+}
+
+.list-items[data-list-type="ordered"] {
+    list-style: decimal;
+}
+
+.list-entry {
+    padding-left: 0.2rem;
+}
+
+.list-entry-copy {
+    margin: 0;
+    color: #5d4637;
+    font-size: 1.08rem;
+    line-height: 1.55;
+}
+
+.list-meta {
+    margin: 0.45rem 0 0;
+}
+
+.list-note {
+    margin: 0.38rem 0 0;
+    color: var(--muted);
+    font-size: 0.96rem;
+    font-style: italic;
+}
+
+.list-note-paragraph + .list-note-paragraph {
+    margin-top: 0.34rem;
+}
+
+code {
+    padding: 0.06em 0.35em;
+    background: rgba(248, 241, 231, 0.92);
+    border-radius: 0.28em;
+    font-family: "SFMono-Regular", "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.92em;
+}
+
+@media (max-width: 760px) {
+    .list-notes {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 430px) {
+    .list-sheet,
+    .list-card {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .list-items {
+        padding-left: 1.2rem;
+    }
+}
