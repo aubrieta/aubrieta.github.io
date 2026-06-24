@@ -1,56 +1,36 @@
 :root {
-    --paper: #f7f1e8;
-    --paper-deep: #eee3d4;
-    --ink: #4c3528;
-    --muted: #806b5b;
-    --line: #decdbb;
-    --link-bg: #ead8c2;
-    --link-bg-hover: #dcc3a6;
-    --shadow: rgba(76, 53, 40, 0.1);
+    --paper: #fffaf4;
+    --paper-deep: #f8f1e7;
+    --ink: #5c4a3f;
+    --muted: #7a675d;
+    --line: rgba(117, 98, 84, 0.18);
+    --link-bg: rgba(236, 211, 122, 0.72);
+    --link-bg-hover: rgba(228, 196, 83, 0.84);
+    --shadow: rgba(101, 82, 67, 0.08);
 }
 
 * {
     box-sizing: border-box;
 }
 
-html {
-    background: var(--paper);
-}
-
 body {
     min-height: 100vh;
     margin: 0;
     color: var(--ink);
-    background:
-        linear-gradient(180deg, rgba(255, 252, 247, 0.72), rgba(247, 241, 232, 0) 18rem),
-        var(--paper);
-    font-family: Iowan Old Style, Palatino Linotype, Palatino, Georgia, serif;
+    background: var(--paper);
+    font-family: "Iowan Old Style", Baskerville, "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
     font-size: 18px;
-    line-height: 1.7;
+    line-height: 1.65;
     text-rendering: optimizeLegibility;
-}
-
-body::before {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    content: "";
-    background-image:
-        linear-gradient(rgba(76, 53, 40, 0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(76, 53, 40, 0.018) 1px, transparent 1px);
-    background-size: 34px 34px;
-    -webkit-mask-image: linear-gradient(180deg, black, transparent 78%);
-    mask-image: linear-gradient(180deg, black, transparent 78%);
 }
 
 .page-shell {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(220px, 310px);
     column-gap: clamp(28px, 6vw, 72px);
-    width: min(100% - 40px, 980px);
+    width: min(100% - 24px, 1060px);
     margin: 0 auto;
-    padding: clamp(36px, 8vw, 96px) 0 clamp(48px, 9vw, 112px);
+    padding: clamp(22px, 4vw, 44px) 0 clamp(40px, 5vw, 72px);
 }
 
 .page-shell-single {
@@ -73,7 +53,7 @@ body::before {
 .kicker {
     margin: 0 0 18px;
     color: var(--muted);
-    font-size: 0.78rem;
+    font-size: 0.82rem;
     font-style: italic;
     letter-spacing: 0;
 }
@@ -154,7 +134,7 @@ h1 {
     left: 0.38rem;
     width: 1px;
     content: "";
-    background: linear-gradient(180deg, rgba(128, 107, 91, 0.38), rgba(128, 107, 91, 0.14));
+    background: linear-gradient(180deg, rgba(122, 103, 93, 0.34), rgba(122, 103, 93, 0.12));
 }
 
 .vita-entry {
@@ -224,9 +204,11 @@ a,
 .soft-link {
     color: var(--ink);
     text-decoration: none;
-    background:
-        linear-gradient(transparent 42%, var(--link-bg) 42%, var(--link-bg) 88%, transparent 88%);
-    border-radius: 4px;
+    padding: 0 0.08em;
+    background: var(--link-bg);
+    border-radius: 0.25em;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
     transition: background-color 160ms ease, color 160ms ease;
 }
 
@@ -236,8 +218,7 @@ a:focus-visible,
 .soft-link:focus-visible,
 .soft-link.is-hovered {
     color: #35241b;
-    background:
-        linear-gradient(transparent 34%, var(--link-bg-hover) 34%, var(--link-bg-hover) 90%, transparent 90%);
+    background: var(--link-bg-hover);
     outline: none;
 }
 
@@ -269,8 +250,8 @@ a:focus-visible,
 
     .page-shell {
         display: block;
-        width: min(100% - 30px, 680px);
-        padding-top: 34px;
+        width: min(100% - 24px, 760px);
+        padding-top: 24px;
     }
 
     .intro {
@@ -310,8 +291,8 @@ a:focus-visible,
     }
 
     .page-shell {
-        width: min(100% - 24px, 680px);
-        padding-top: 28px;
+        width: min(100% - 18px, 760px);
+        padding-top: 18px;
     }
 
     h1 {
