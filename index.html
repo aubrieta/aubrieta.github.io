@@ -6,40 +6,73 @@
     <title>aubrieta</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="stylesheet" href="styles.css?v=20260527">
+    <link rel="stylesheet" href="home.css?v=20260624">
 </head>
 <body>
     <main class="page-shell">
-        <section class="intro" aria-labelledby="intro-heading">
-            <div class="intro-copy">
-                <p class="kicker">aubrieta is a tiny, tumbling, flowering plant</p>
-                <h1 id="intro-heading">Hi there!</h1>
+        <section class="scrapbook" aria-labelledby="intro-heading">
+            <div class="collage">
+                <div class="left-stack">
+                    <div class="main-scrap-wrap">
+                        <article class="main-scrap">
+                            <p class="kicker">tiny, tumbling, flowering plant</p>
+                            <h1 id="intro-heading">hi there!</h1>
+                        </article>
+                    </div>
+
+                    <section class="sticky-grid" aria-label="A few notes">
+                        <div class="sticky-note sticky-a">
+                            <p class="sticky sticky-sage">
+                                I'm broadly interested in
+                                <span class="soft-link hover-swap" tabindex="0">
+                                    <span class="normal-text">theoretical computer science</span>
+                                    <span class="hover-text">math pretending to be computer science</span>
+                                </span>, especially the theory of cryptography.
+                            </p>
+                        </div>
+
+                        <div class="sticky-note sticky-b">
+                            <p class="sticky sticky-cream">
+                                I was born in Ohio, but I've spent most of my life in
+                                <a href="https://www.youtube.com/watch?v=dCer2e0t8r8">California</a>.
+                            </p>
+                        </div>
+
+                        <div class="sticky-note sticky-c">
+                            <p class="sticky sticky-peach">
+                                I enjoy learning languages and meeting the cats of North Berkeley.
+                            </p>
+                        </div>
+
+                        <div class="sticky-note sticky-d">
+                            <p class="sticky sticky-sun">
+                                Here is a short <a href="vita.html">vita</a>.
+                            </p>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="right-stack">
+                    <figure class="photo-polaroid">
+                        <div class="photo-frame">
+                            <img src="images/reflective_cat.JPG" alt="A reflective cat in North Berkeley.">
+                        </div>
+                        <figcaption>A reflective cat in North Berkeley.</figcaption>
+                    </figure>
+
+                    <!--
+                    <aside class="mini-note" aria-label="small note">
+                        <ul>
+                            <li>cryptography</li>
+                            <li>languages</li>
+                            <li>cats</li>
+                        </ul>
+                    </aside>
+                    -->
+                </div>
+
+                <div class="rose-sticker" aria-hidden="true">✿</div>
             </div>
-
-            <figure class="portrait">
-                <img src="images/reflective_cat.JPG" alt="A reflective cat in North Berkeley.">
-                <figcaption>A reflective cat in North Berkeley.</figcaption>
-            </figure>
-        </section>
-
-        <section class="notes" aria-label="A few notes">
-            <p>
-                I was born in Ohio, but I've spent most of my life in
-                <a href="https://www.youtube.com/watch?v=dCer2e0t8r8">California</a>.
-            </p>
-            <p>
-                I'm broadly interested in
-                <span class="soft-link hover-swap" tabindex="0">
-                    <span class="normal-text">theoretical computer science</span>
-                    <span class="hover-text">math pretending to be computer science</span>
-                </span>, especially the theory of cryptography.
-            </p>
-            <p>
-                I also enjoy learning languages and meeting the cats of North Berkeley.
-            </p>
-            <p>
-                Here is a short <a href="vita.html">vita</a>.
-            </p>
         </section>
     </main>
 
