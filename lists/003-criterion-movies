@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example list | aubrieta</title>
+    <link rel="stylesheet" href="../styles.css?v=20260624">
+    <link rel="stylesheet" href="lists.css?v=20260624">
+</head>
+<body>
+    <main class="page-shell page-shell-single">
+        <section class="intro intro-stack" aria-labelledby="list-heading">
+            <div class="intro-copy">
+                <p class="kicker"><a href="index.html">all lists</a> / <a href="../index.html">home</a></p>
+                <h1 class="list-title" id="list-heading">Summer 2026 French vocabulary</h1>
+                <p class="lede list-lede" id="list-lede"></p>
+                <p class="list-header-meta" id="list-header-meta" hidden></p>
+            </div>
+        </section>
+
+        <section class="notes list-notes" aria-label="List contents">
+            <article class="list-sheet">
+                <p class="list-page-note" id="list-page-note" hidden></p>
+                <div id="list-items"></div>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        window.LIST_PAGE = {
+            title: "Criterion Movies",
+            intro: "These are the films I've watched since purchasing a Criterion Channel subscription in June 2026.",
+            listType: "unordered",
+            // date: "June 24, 2026",
+            // location: "Paris",
+            // pageNote: "This page shows the optional fields. Delete anything you do not want on your own list.",
+            entries: [
+                {   
+                    text: "All We Imagine as Light",
+                    // date: "June 19, 2026",
+                    // location: "Musée National Picasso-Paris",
+                    noteHtml: "Dir. Payal Kapadia." 
+                },
+                {   
+                    text: "The Love That Remains",
+                    // date: "June 19, 2026",
+                    // location: "Musée National Picasso-Paris",
+                    noteHtml: "Dir. Hlynur Pálmason." 
+                },
+                {   
+                    text: "Clockwatchers",
+                    // date: "June 19, 2026",
+                    // location: "Musée National Picasso-Paris",
+                    noteHtml: "Dir. Jill Sprecher." 
+                },
+                {   
+                    text: "Breathless",
+                    // date: "June 19, 2026",
+                    // location: "Musée National Picasso-Paris",
+                    noteHtml: "Dir. Jim McBride." 
+                },
+                {   
+                    text: "The Darjeeling Limited",
+                    // date: "June 19, 2026",
+                    // location: "Musée National Picasso-Paris",
+                    noteHtml: "Dir. Wes Anderson." 
+                },
+                {   
+                    text: "Rachel Getting Married",
+                    // date: "June 19, 2026",
+                    // location: "Musée National Picasso-Paris",
+                    noteHtml: "Dir. Jonathan Demme." 
+                },
+                
+            ]
+        };
+    </script>
+    <script src="list-page.js?v=20260624"></script>
+</body>
+</html>
