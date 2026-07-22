@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example list | aubrieta</title>
+    <link rel="stylesheet" href="../styles.css?v=20260624">
+    <link rel="stylesheet" href="lists.css?v=20260624">
+</head>
+<body>
+    <main class="page-shell page-shell-single">
+        <section class="intro intro-stack" aria-labelledby="list-heading">
+            <div class="intro-copy">
+                <p class="kicker"><a href="index.html">all lists</a> / <a href="../index.html">home</a></p>
+                <h1 class="list-title" id="list-heading">Summer 2026 French vocabulary</h1>
+                <p class="lede list-lede" id="list-lede"></p>
+                <p class="list-header-meta" id="list-header-meta" hidden></p>
+            </div>
+        </section>
+
+        <section class="notes list-notes" aria-label="List contents">
+            <article class="list-sheet">
+                <p class="list-page-note" id="list-page-note" hidden></p>
+                <div id="list-items"></div>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        window.LIST_PAGE = {
+            title: "My favorite things",
+            intro: "(selected)",
+            listType: "unordered",
+            // date: "June 24, 2026",
+            // location: "Paris",
+            // pageNote: "This page shows the optional fields. Delete anything you do not want on your own list.",
+            entries: [
+                {   
+                    text: "raindrops on roses and",
+                },  
+                {   
+                    text: "whiskers on kittens",
+                },       
+                {   
+                    content: "<a href=\"https://www.youtube.com/watch?v=wDs5GMg69Yw\">Dennis Bergkamp aaaaaaaa</a>",
+
+                }, 
+                {
+                    text: "snail mail"
+                },
+                {
+                    text: "fountain pens"
+                },
+                {
+                    text: "The 1987 Berlitz Self-Teacher Italian"
+                },
+                {
+                    content: "<a href=\"https://birdsarentreal.com/pages/evidence\">Birds Aren't Real</a>",
+                },
+                {
+                    text: "Wiktionary"
+                },
+                {
+                    text: "macerated strawberries"
+                },
+                {
+                    text: "earl grey tea"
+                },
+                {
+                    text: "arugula"
+                }
+            ]
+        };
+    </script>
+    <script src="list-page.js?v=20260624"></script>
+</body>
+</html>
