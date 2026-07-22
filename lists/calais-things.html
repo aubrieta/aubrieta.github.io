@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example list | aubrieta</title>
+    <link rel="stylesheet" href="../styles.css?v=20260624">
+    <link rel="stylesheet" href="lists.css?v=20260624">
+</head>
+<body>
+    <main class="page-shell page-shell-single">
+        <section class="intro intro-stack" aria-labelledby="list-heading">
+            <div class="intro-copy">
+                <p class="kicker"><a href="index.html">all lists</a> / <a href="../index.html">home</a></p>
+                <h1 class="list-title" id="list-heading">Summer 2026 French vocabulary</h1>
+                <p class="lede list-lede" id="list-lede"></p>
+                <p class="list-header-meta" id="list-header-meta" hidden></p>
+            </div>
+        </section>
+
+        <section class="notes list-notes" aria-label="List contents">
+            <article class="list-sheet">
+                <p class="list-page-note" id="list-page-note" hidden></p>
+                <div id="list-items"></div>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        window.LIST_PAGE = {
+            title: "Just Calais things",
+            intro: "I visited Calais from July 9th to July 12th, 2026. Here are some tidbits about the city that stood out to me.",
+            listType: "unordered",
+            // date: "June 24, 2026",
+            // location: "Paris",
+            // pageNote: "This page shows the optional fields. Delete anything you do not want on your own list.",
+            entries: [
+                {   
+                    text: "Summers are temperate.",
+                    noteHtml: "Truthfully, the decision to go to Calais was made after spending hours carefully examining a temperature map. While Paris (and almost everywhere else in France) was sweltering hot, Calais was at a high of 76F, and even then the ocean breeze cooled everything down." 
+                },
+                {   
+                    text: "Public transportation is widely available, clean, and free.",
+                    noteHtml: "You can easily go around the city or directly to the beach, and a one-hour bus ride takes you to to the breathtaking Cap Blanc-Nez on the Côte d'Opale." 
+                },
+                {   
+                    text: "The wonderful museum is free for everyone.",
+                    noteHtml: "There's obviously an old collection of 19th century rich people portraits, but there's also a room for modern art and another room dedicated to Rodin. I really enjoyed the Jeanne Thil exhibition." 
+                },
+                {   
+                    text: "The center of the city famously has an original 1895 cast of a Rodin sculture.",
+                    noteHtml: "It's called Les Bourgeois de Calais. Rodin was commissioned to commemorate a moment from the English surrender. If I understood correctly, Rodin originally planned for Les Bourgeois to be on a pedestal, but decided against it so they would be at the level of the viewers." 
+                },
+                {   
+                    text: "The Church is asymmetrical.",
+                    noteHtml: "Construction of Église Notre-Dame de Calais began when the town was a part of England and finished when it was back in the hands of the French, so one side of it looks like English architecture and the other side looks like French architecture." 
+                },
+                {   
+                    text: "There's a long, gorgeous, sandy beach.",
+                    noteHtml: "Even in July, it's not super crowded. Sunsets are lovely. The area just outside of the shore is filled with lots of local food options." 
+                },
+                {   
+                    text: "You can see across the Channel to Britain.",
+                    noteHtml: "They say if the British shore isn't visible, it's going to rain within 48 hours." 
+                },
+                {   
+                    text: "Along the beach, you can ride giant, mechanical dragons that breathe fire.",
+                    noteHtml: "I'm just going to leave that there." 
+                },
+                {   
+                    text: "You can get near the top of the beautiful, gilded belfry for very cheap.",
+                    noteHtml: "From the top you can see the whole town --- the shores, the ports, the opera house, the old lace factory, and more. And the attached hôtel de ville is equally stunning, inside and outside. The day I was there, there were people carefully assmebling a model of the whole city, little sheep on the hills and all." 
+                },
+                {   
+                    text: "There's a farm with a restaurant open to the public.",
+                    noteHtml: "And the best part is that it's just in the middle of the city, among the hustle and bustle of the shops. You take a turn and there you are. The restaurant food is fresh and tasty, and there's a little library inside. The farm has chickens, goats, donkeys, ponies, and lots of vegetables." 
+                },
+                {   
+                    text: "Random David Bowie tribute concert?!",
+                    noteHtml: "I don't know what the event was. I was walking back to where I was staying and I saw a guy in a beret singing Rebel Rebel on a stage. It was still early on so the crowd wasn't so large at that time; by the time I headed out, after Heroes, the whole plaza was filled. There was security and everything. Policemen on horses. They take culture seriously!" 
+                },
+                {   
+                    text: "There's a peaceful park with lots and lots of benches.",
+                    noteHtml: "It's called Parc Richelieu. So much seating, I had no trouble finding the perfect spot by the fountain. The park itself is full of flowers and foliage, and it's a mostly flat walk. Very calming." 
+                },
+                {   
+                    text: "Fluffy dogs everywhere.",
+                    noteHtml: "Seems like everyone has a dog here! People walk their dogs downtown, on the street, on the beach. And peeking through the windows, you'll often see cat trees. Animals seem to like it here." 
+                },
+                {   
+                    text: "Sidewalks are often wider than roads.",
+                    noteHtml: "I believe that the best towns are walkable. And indeed, you can drive around Calais, but it's fairly straightforward to walk, and it's often prioritized. I like that." 
+                },
+                {   
+                    text: "There's a movie theater playing unconventional movies!",
+                    noteHtml: "At the malls in Paris they were playing Backrooms, the De Gaulle biopic, and Minions 5. But at Cinéma Alhambra, they played a profound, moving \"think piece film\" steeped in nature called L'Illusion de Yakushima. And Minions 5." 
+                },
+                {   
+                    text: "You can see lots and lots of street art.",
+                    noteHtml: "And they're all around the city, in varying styles and colors. I had so much fun standing at one spot and looking around at the murals near me and in the distance." 
+                },
+                {   
+                    text: "Some cement blocks are graffitied with puns about musicians.",
+                    noteHtml: "You kind of just have to see them for yourself :)" 
+                },                
+            ]
+        };
+    </script>
+    <script src="list-page.js?v=20260624"></script>
+</body>
+</html>
