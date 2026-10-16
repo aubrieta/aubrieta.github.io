@@ -3,34 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#b6c2ff">
     <title>lists | aubrieta</title>
-    <link rel="stylesheet" href="../styles.css?v=20260624">
-    <link rel="stylesheet" href="lists.css?v=20260624">
+    <link rel="stylesheet" href="../retro.css?v=20261015-pastel">
+    <link rel="stylesheet" href="directory.css?v=20261015-embedded">
+    <link rel="icon" href="../assets/flower.svg?v=20261015-pastel" type="image/svg+xml">
+    <script src="directory.js?v=20261015-embedded" defer></script>
 </head>
-<body>
-    <main class="page-shell page-shell-single">
-        <section class="intro intro-stack" aria-labelledby="lists-heading">
-            <div class="intro-copy">
-                <p class="kicker"><a href="../index.html">back home</a></p>
-                <h1 class="list-title" id="lists-heading">Lists</h1>
+<body class="directory-desktop">
+    <main class="window directory-window" data-view="details" aria-labelledby="folder-heading">
+        <header class="title-bar active">
+            <img src="../assets/folder.svg?v=20261015-pastel" alt="" width="22" height="22">
+            <h1 id="folder-heading">lists</h1>
+            <a class="close-window" href="../index.html" aria-label="Close folder and return to desktop">×</a>
+        </header>
+        <div class="directory-toolbar">
+            <a class="parent-button" href="../index.html"><span aria-hidden="true">↑</span> Desktop</a>
+            <div class="view-controls" role="group" aria-label="Folder view">
+                <button type="button" data-view="icons" aria-pressed="false" title="Icon view"><span class="grid-symbol" aria-hidden="true">▦</span> Icons</button>
+                <button type="button" data-view="details" aria-pressed="true" title="Details view"><span aria-hidden="true">☷</span> Details</button>
             </div>
-        </section>
-
-        <section class="notes list-notes" aria-label="List directory">
-            <article class="list-sheet">
-                <ul class="list-index-list">
-                    <li><a href="my-favorite-things.html">A few of my favorite things</a></li>
-                    <li><a href="summer-26-french-vocab.html">Summer 2026 French vocabulary</a></li>
-                    <li><a href="summer-26-french-translations.html">Summer 2026 French translations</a></li>
-                    <li><a href="criterion-movies.html">Criterion Channel movies</a></li>
-                    <li><a href="calais-things.html">Calais things</a></li>
-
-                    <!-- <li><a href="criterion-movies.html">Criterion Channel movies</a></li> -->
-
-
+        </div>
+        <nav class="address-bar" aria-label="Folder path">
+            <span class="address-label">Location</span>
+            <div class="folder-path"><img src="../assets/folder.svg?v=20261015-pastel" alt="" width="20" height="20"><a href="../index.html">aubrieta</a><span aria-hidden="true">/</span><span aria-current="page">lists</span></div>
+        </nav>
+        <div class="directory-content">
+            <aside class="folder-sidebar" aria-label="Folders">
+                <p>Folders</p>
+                <a href="../index.html"><img src="../assets/computer.svg?v=20261015-pastel" alt="" width="24" height="24">Desktop</a>
+                <span class="current-folder"><img src="../assets/folder.svg?v=20261015-pastel" alt="" width="24" height="24">lists</span>
+            </aside>
+            <section class="file-area" aria-label="Files in lists">
+                <div class="details-heading" aria-hidden="true"><span>Title</span><span>Kind</span></div>
+                <ul class="file-grid">
+                    <li><a class="file" href="my-favorite-things.html" aria-label="Open A few of my favorite things"><img src="../assets/document.svg?v=20261015-pastel" alt="" width="56" height="56"><span class="file-name">A few of my favorite things</span><span class="file-kind">Text document</span></a></li>
+                    <li><a class="file" href="summer-26-french-vocab.html" aria-label="Open Summer 2026 French vocabulary"><img src="../assets/document.svg?v=20261015-pastel" alt="" width="56" height="56"><span class="file-name">Summer 2026 French vocabulary</span><span class="file-kind">Text document</span></a></li>
+                    <li><a class="file" href="summer-26-french-translations.html" aria-label="Open Summer 2026 French translations"><img src="../assets/document.svg?v=20261015-pastel" alt="" width="56" height="56"><span class="file-name">Summer 2026 French translations</span><span class="file-kind">Text document</span></a></li>
+                    <li><a class="file" href="criterion-movies.html" aria-label="Open Criterion Channel movies"><img src="../assets/document.svg?v=20261015-pastel" alt="" width="56" height="56"><span class="file-name">Criterion Channel movies</span><span class="file-kind">Text document</span></a></li>
+                    <li><a class="file" href="calais-things.html" aria-label="Open Calais things"><img src="../assets/document.svg?v=20261015-pastel" alt="" width="56" height="56"><span class="file-name">Calais things</span><span class="file-kind">Text document</span></a></li>
                 </ul>
-            </article>
-        </section>
+            </section>
+        </div>
+        <footer class="directory-status"><span>5 files</span><span class="folder-size">lists</span><span class="directory-grip" aria-hidden="true"></span></footer>
     </main>
 </body>
 </html>

@@ -220,3 +220,12 @@ code {
         padding-left: 1.2rem;
     }
 }
+
+/* Retro file windows */
+:root { --list-accent:#b09bd2; --list-paper:#fbf6f3; --list-paper-deep:#eee5f3; }
+.list-sheet,.list-card { background:var(--list-paper); border:1px solid var(--line); box-shadow:3px 3px #8276aa45; }
+.list-sheet::before,.list-card::before { display:none; }
+.list-entry-copy,.list-index-list li,.list-page-note { color:var(--ink); }
+.list-index-list li::marker,.list-steps li::marker,.list-items .list-entry::marker { color:#9c81b8; }
+.list-sheet-label,.list-card-kicker,.list-directory-heading,.list-header-meta,.list-meta { font-family:var(--pixel); font-size:15px; }
+code { background:#eee5f3; border-radius:0; }

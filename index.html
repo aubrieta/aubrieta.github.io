@@ -3,88 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aubrieta</title>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="stylesheet" href="home.css?v=20260624">
+    <meta name="theme-color" content="#b6c2ff">
+    <meta name="description" content="A personal desktop for cryptography, languages, lists, and art.">
+    <title>aubrieta — welcome to my desktop</title>
+    <link rel="icon" href="assets/flower.svg?v=20261015-pastel" type="image/svg+xml">
+    <link rel="stylesheet" href="retro.css?v=20261015-pastel">
+    <link rel="stylesheet" href="home.css?v=20261015-folder">
+    <script src="desktop.js?v=20261015-folder" defer></script>
 </head>
-<body>
-    <main class="page-shell">
-        <section class="scrapbook" aria-labelledby="intro-heading">
-            <div class="collage">
-                <div class="left-stack">
-                    <div class="main-scrap-wrap">
-                        <article class="main-scrap">
-                            <p class="kicker">tiny, tumbling, flowering plant</p>
-                            <h1 id="intro-heading">hi there!</h1>
-                        </article>
+<body class="home">
+    <a class="skip-link" href="#welcome">Skip to content</a>
+    <div class="desktop">
+        <header class="menu-bar">
+            <a class="brand" href="index.html"><img src="assets/flower.svg?v=20261015-pastel" alt="" width="24" height="24"> drisana bhatia</a>
+            <nav aria-label="Main navigation"><a href="index.html" aria-current="page">Home</a></nav>
+            <time id="desktop-clock" aria-label="Local time"></time>
+        </header>
+        <main class="workspace">
+                <nav class="desktop-shortcuts" aria-label="Desktop shortcuts">
+                    <a href="vita.html"><img src="assets/document.svg?v=20261015-pastel" alt="" width="54" height="54"><span>vita</span></a>
+                    <a href="lists/index.html"><img src="assets/folder.svg?v=20261015-pastel" alt="" width="54" height="54"><span>lists</span></a>
+                </nav>
+            <div class="desktop-scene">
+            <div class="art-column">
+                <figure class="window painting-window draggable-window" id="painting-window">
+                    <div class="title-bar" role="group" tabindex="0" aria-label="Move painting window. Drag or use arrow keys; Home resets position."><img src="assets/picture.svg?v=20261015-pastel" alt="" width="18" height="18"><span>mountain_landscape.png</span></div>
+                    <div class="painting-body">
+                        <img src="images/mountain-landscape-1898.png" alt="Mountain Landscape (1898), with dark mountain peaks and turquoise, gold, and red textured strokes." width="720" height="540">
+                        <figcaption><cite>Mountain Landscape</cite> (1898)</figcaption>
                     </div>
-
-                    <section class="sticky-grid" aria-label="A few notes">
-                        <div class="sticky-note sticky-a">
-                            <p class="sticky sticky-sage">
-                                I'm broadly interested in
-                                <span class="soft-link hover-swap" tabindex="0">
-                                    <span class="normal-text">theoretical computer science</span>
-                                    <span class="hover-text">math pretending to be computer science</span>
-                                </span>, especially the theory of cryptography.
-                            </p>
-                        </div>
-
-                        <div class="sticky-note sticky-b">
-                            <p class="sticky sticky-cream">
-                                I was born in Ohio, but I've spent most of my life in
-                                <a href="https://www.youtube.com/watch?v=dCer2e0t8r8">California</a>.
-                            </p>
-                        </div>
-
-                        <div class="sticky-note sticky-c">
-                            <p class="sticky sticky-peach">
-                                I enjoy learning languages, doing crosswords, and making <a href="lists/index.html">lists</a>.
-                            </p>
-                        </div>
-
-                        <div class="sticky-note sticky-d">
-                            <p class="sticky sticky-sun">
-                                Here is a little <a href="vita.html">vita</a>. 
-                            </p>
-                        </div>
-                    </section>
-                </div>
-
-                <div class="right-stack">
-                    <figure class="photo-polaroid">
-                        <div class="photo-frame">
-                            <img src="images/reflective_cat.JPG" alt="A reflective cat in North Berkeley.">
-                        </div>
-                        <figcaption>A reflective cat in North Berkeley.</figcaption>
-                    </figure>
-
-                    <!--
-                    <aside class="mini-note" aria-label="small note">
-                        <ul>
-                            <li>cryptography</li>
-                            <li>languages</li>
-                            <li>cats</li>
-                        </ul>
-                    </aside>
-                    -->
-                </div>
-
-                <div class="rose-sticker" aria-hidden="true">✿</div>
+                </figure>
             </div>
-        </section>
-    </main>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var swaps = document.querySelectorAll(".hover-swap");
-
-            swaps.forEach(function (el) {
-                el.addEventListener("click", function () {
-                    el.classList.toggle("is-hovered");
-                });
-            });
-        });
-    </script>
+            <div class="center-column">
+                <section class="window welcome-window draggable-window" id="welcome" aria-labelledby="intro-heading">
+                    <div class="title-bar active" id="welcome-handle" role="group" tabindex="0" aria-label="Move welcome window. Drag or use arrow keys; Home resets position."><img src="assets/document.svg?v=20261015-pastel" alt="" width="18" height="18"><span>welcome.txt</span></div>
+                    <div class="welcome-body">
+                        <h1 id="intro-heading">hi, i'm drisana<span class="heading-bang">!</span><img src="assets/flower.svg?v=20261015-pastel" alt="" width="48" height="48"></h1>
+                        <div class="intro-rule" aria-hidden="true"></div>
+                        <p>I'm a PhD student at Brown University broadly interested in <button class="hover-swap" type="button" aria-pressed="false"><span class="normal-text">theoretical computer science</span><span class="hover-text">math pretending to be computer science</span></button>, especially the theory of cryptography.</p>
+                        <p>I was born in Ohio, but I've spent most of my life in <a href="https://www.youtube.com/watch?v=dCer2e0t8r8">California</a>.</p>
+                        <p>I enjoy learning languages, doing crosswords, and making <a href="lists/index.html">lists</a>.</p>
+                        <p>Here is a little <a href="vita.html">vita</a>.</p>
+                    </div>
+                    <div class="window-status"><span>1 document open</span><span>made of little things</span><span class="resize-grip" aria-hidden="true"></span></div>
+                </section>
+            </div>
+            <div class="right-column">
+                <figure class="window photo-window draggable-window" id="photo-window">
+                    <div class="title-bar" role="group" tabindex="0" aria-label="Move photo window. Drag or use arrow keys; Home resets position."><img src="assets/picture.svg?v=20261015-pastel" alt="" width="18" height="18"><span>reflective_cat.jpg</span></div>
+                    <div class="photo-body"><img class="cat-photo" src="images/reflective_cat-480.webp" alt="A reflective cat in North Berkeley." width="480" height="600"><figcaption>A reflective cat<br>in North Berkeley.</figcaption></div>
+                </figure>
+            </div>
+            </div>
+            <div class="folder-layer" hidden>
+                <section class="window folder-window draggable-window" id="lists-window" aria-label="Lists folder">
+                    <div class="title-bar" role="group" tabindex="0" aria-label="Move lists window. Drag or use arrow keys; Home resets position."><img src="assets/folder.svg?v=20261015-pastel" alt="" width="20" height="20"><span>lists</span></div>
+                    <iframe src="lists/index.html?embedded=1" title="Lists directory" loading="lazy"></iframe>
+                </section>
+            </div>
+            <div class="desktop-sparkles" aria-hidden="true"><span>✧</span><span>+</span><span>✧</span></div>
+        </main>
+        <footer class="taskbar"><a class="start-button" href="index.html"><img src="assets/flower.svg?v=20261015-pastel" alt="" width="24" height="24">aubrieta</a><div class="open-windows" aria-label="Open windows">
+            <button class="task-tab is-active" type="button" data-window="welcome" aria-label="Show welcome window" aria-pressed="true"><img src="assets/document.svg?v=20261015-pastel" alt="" width="18" height="18"><span>welcome.txt</span></button>
+            <button class="task-tab" type="button" data-window="painting-window" aria-label="Show painting window" aria-pressed="true"><img src="assets/picture.svg?v=20261015-pastel" alt="" width="18" height="18"><span>landscape</span></button>
+            <button class="task-tab" type="button" data-window="photo-window" aria-label="Show photo window" aria-pressed="true"><img src="assets/picture.svg?v=20261015-pastel" alt="" width="18" height="18"><span>cat</span></button>
+            <button class="task-tab" type="button" data-window="lists-window" aria-label="Show lists window" aria-pressed="false" hidden><img src="assets/folder.svg?v=20261015-pastel" alt="" width="18" height="18"><span>lists</span></button>
+        </div></footer>
+    </div>
 </body>
 </html>
