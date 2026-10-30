@@ -31,7 +31,7 @@
 .menu-bar nav a:hover, .menu-bar nav a[aria-current] { text-decoration: underline; }
 .menu-message { margin: auto; color: var(--muted); font-size: 11px; }
 #desktop-clock { margin-left: auto; white-space: nowrap; }
-.workspace { flex: 1; min-height: 0; position: relative; }
+.workspace { flex: 1; min-height: 0; position: relative; isolation: isolate; }
 .desktop-scene {
     position: absolute;
     display: grid;
@@ -84,11 +84,13 @@
 .home .start-button { padding: 2px 9px; font-size: 12px; }
 .task-tab { display: flex; align-items: center; gap: 8px; padding: 4px 30px 4px 10px; border: 1px solid #aea1c0; background: #f2efff; box-shadow: inset 1px 1px #c7bed5; }
 .taskbar-flower { margin-left: auto; font-size: 22px; padding: 0 10px; border-left: 1px solid #b3a6c7; }
-.desktop-sparkles { position: absolute; inset: 0; pointer-events: none; color: #f6f0ff; }
+.desktop-sparkles { position: absolute; inset: 0; z-index: -1; pointer-events: none; color: #f6f0ff; }
 .desktop-sparkles span { position: absolute; font-size: 26px; }
+.desktop-sparkles span:nth-child(even) { color: #f9dfef; font-size: 24px; }
 .desktop-sparkles span:nth-child(1) { top: 5%; left: 25%; }
 .desktop-sparkles span:nth-child(2) { bottom: 5%; left: 15%; }
 .desktop-sparkles span:nth-child(3) { bottom: 8%; right: 8%; }
+.desktop-sparkles span:nth-child(4) { top: 22%; right: 25%; }
 @media (max-width: 760px) {
     .menu-message { display: none; }
     .menu-bar { gap: 20px; }

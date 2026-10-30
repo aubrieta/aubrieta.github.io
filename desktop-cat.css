@@ -1,0 +1,109 @@
+/* A little companion with its own space, just above the taskbar. */
+.cat-walkway {
+    position: relative;
+    flex: 0 0 52px;
+    min-height: 52px;
+    isolation: isolate;
+}
+.cat-walkway[hidden] { display: none; }
+.desktop-cat {
+    position: absolute;
+    left: 8px;
+    bottom: -3px;
+    width: 60px;
+    height: 48px;
+    padding: 0;
+    border: 0;
+    background: none;
+    transform: translateX(var(--cat-x, 0px));
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+.desktop-cat:focus-visible { outline-offset: 0; }
+.cat-sprite {
+    display: block;
+    width: 60px;
+    height: 48px;
+    background: url('assets/desktop-cat.svg?v=20261029-orange-cat') 0 0 / 480px 48px no-repeat;
+    image-rendering: pixelated;
+    transform: scaleX(var(--cat-facing, 1));
+    transform-origin: center bottom;
+}
+.desktop-cat[data-state="walking"] .cat-sprite { animation: cat-walk 560ms steps(1) infinite; }
+.desktop-cat[data-state="sitting"] .cat-sprite {
+    background-position-x: -420px;
+    animation: cat-blink 4.6s steps(1) infinite;
+}
+.desktop-cat[data-state="sleeping"] .cat-sprite {
+    background-position-x: -240px;
+    animation: cat-breathe 2.8s steps(2) infinite;
+}
+.desktop-cat[data-state="petted"] .cat-sprite {
+    background-position-x: -300px;
+    animation: cat-nuzzle 600ms steps(3) 2;
+}
+.desktop-cat[data-state="curious"] .cat-sprite { background-position-x: -360px; }
+.cat-thought {
+    position: absolute;
+    left: calc(100% - 2px);
+    bottom: 22px;
+    padding: 2px 7px;
+    border: 1px solid #9b83b2;
+    background: #fff7ef;
+    color: #62508f;
+    box-shadow: 2px 2px 0 #9b83b233;
+    font: 10px/1.5 var(--pixel);
+    white-space: nowrap;
+    pointer-events: none;
+}
+.desktop-cat[data-bubble-side="left"] .cat-thought { left: auto; right: calc(100% - 2px); }
+.desktop-cat[data-state="sleeping"] .cat-thought {
+    border: 0;
+    background: none;
+    box-shadow: none;
+    color: #62508f;
+    letter-spacing: 2px;
+}
+.cat-thought[hidden] { display: none; }
+.cat-nap-toggle {
+    position: absolute;
+    right: 10px;
+    bottom: 8px;
+    min-height: 32px;
+    padding: 4px 9px;
+    border: 1px solid #a89cc3;
+    background: #eee8ff;
+    box-shadow: inset 1px 1px #fff9;
+    color: #62508f;
+    font: 10px/1.4 var(--pixel);
+}
+.cat-nap-toggle:hover { background: #f4d8ed; }
+.cat-nap-toggle[aria-pressed="true"] { background: #d5f5ef; }
+.cat-status {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+@keyframes cat-walk {
+    0%, 100% { background-position-x: -60px; }
+    25%, 75% { background-position-x: 0; }
+    50% { background-position-x: -120px; }
+}
+@keyframes cat-blink {
+    0%, 92%, 98%, 100% { background-position-x: -420px; }
+    93%, 97% { background-position-x: -180px; }
+}
+@keyframes cat-breathe {
+    0%, 100% { transform: scaleX(var(--cat-facing, 1)) translateY(0); }
+    50% { transform: scaleX(var(--cat-facing, 1)) translateY(-2px); }
+}
+@keyframes cat-nuzzle {
+    0%, 100% { transform: scaleX(var(--cat-facing, 1)) translateY(0); }
+    50% { transform: scaleX(var(--cat-facing, 1)) translateY(-3px); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .desktop-cat[data-state] .cat-sprite { animation: none; }
+}

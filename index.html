@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#b6c2ff">
     <title>aubrieta — welcome to my desktop</title>
-    <link rel="icon" href="assets/flower.svg?v=20261015-pastel" type="image/svg+xml">
+    <link rel="icon" href="assets/star.svg?v=20261029-stars" type="image/svg+xml">
     <link rel="stylesheet" href="retro.css?v=20261015-pastel">
-    <link rel="stylesheet" href="home.css?v=20261015-folder">
+    <link rel="stylesheet" href="home.css?v=20261029-decoration-layer">
+    <link rel="stylesheet" href="desktop-cat.css?v=20261029-orange-cat">
     <script src="desktop.js?v=20261015-folder" defer></script>
+    <script src="desktop-cat.js?v=20261029-cat-redraw" defer></script>
+    <link rel="stylesheet" href="cursor.css?v=20261029-hearts-stars">
+    <script src="cursor.js?v=20261029-hearts-stars" defer></script>
 </head>
 <body class="home">
     <a class="skip-link" href="#welcome">Skip to content</a>
     <div class="desktop">
         <header class="menu-bar">
-            <a class="brand" href="index.html"><img src="assets/flower.svg?v=20261015-pastel" alt="" width="24" height="24"> drisana bhatia</a>
+            <a class="brand" href="index.html"><img src="assets/star.svg?v=20261029-stars" alt="" width="24" height="24"> drisana bhatia</a>
             <nav aria-label="Main navigation"><a href="index.html" aria-current="page">Home</a></nav>
             <time id="desktop-clock" aria-label="Local time"></time>
         </header>
@@ -37,7 +41,7 @@
                 <section class="window welcome-window draggable-window" id="welcome" aria-labelledby="intro-heading">
                     <div class="title-bar active" id="welcome-handle" role="group" tabindex="0" aria-label="Move welcome window. Drag or use arrow keys; Home resets position."><img src="assets/document.svg?v=20261015-pastel" alt="" width="18" height="18"><span>welcome.txt</span></div>
                     <div class="welcome-body">
-                        <h1 id="intro-heading">hi, i'm drisana<span class="heading-bang">!</span><img src="assets/flower.svg?v=20261015-pastel" alt="" width="48" height="48"></h1>
+                        <h1 id="intro-heading">hi, i'm drisana<span class="heading-bang">!</span><img src="assets/heart.svg" alt="" width="48" height="48"></h1>
                         <div class="intro-rule" aria-hidden="true"></div>
                         <p>I'm a PhD student at Brown University broadly interested in <button class="hover-swap" type="button" aria-pressed="false"><span class="normal-text">theoretical computer science</span><span class="hover-text">math pretending to be computer science</span></button>, especially the theory of cryptography.</p>
                         <p>I was born in Ohio, but I've spent most of my life in <a href="https://www.youtube.com/watch?v=dCer2e0t8r8">California</a>.</p>
@@ -60,9 +64,17 @@
                     <iframe src="lists/index.html?embedded=1" title="Lists directory" loading="lazy"></iframe>
                 </section>
             </div>
-            <div class="desktop-sparkles" aria-hidden="true"><span>✧</span><span>+</span><span>✧</span></div>
+            <div class="desktop-sparkles" aria-hidden="true"><span>★</span><span>♥︎</span><span>★</span><span>♥︎</span></div>
         </main>
-        <footer class="taskbar"><a class="start-button" href="index.html"><img src="assets/flower.svg?v=20261015-pastel" alt="" width="24" height="24">aubrieta</a><div class="open-windows" aria-label="Open windows">
+        <div class="cat-walkway" id="cat-walkway" hidden>
+            <button class="desktop-cat" id="desktop-cat" type="button" data-state="sitting" aria-label="Pet the desktop cat" title="Pet the cat">
+                <span class="cat-sprite" aria-hidden="true"></span>
+                <span class="cat-thought" aria-hidden="true" hidden></span>
+            </button>
+            <button class="cat-nap-toggle" type="button" aria-controls="desktop-cat" aria-pressed="false" aria-label="Let the cat nap">nap</button>
+            <span class="cat-status" role="status" aria-live="polite"></span>
+        </div>
+        <footer class="taskbar"><a class="start-button" href="index.html"><img src="assets/star.svg?v=20261029-stars" alt="" width="24" height="24">aubrieta</a><div class="open-windows" aria-label="Open windows">
             <button class="task-tab is-active" type="button" data-window="welcome" aria-label="Show welcome window" aria-pressed="true"><img src="assets/document.svg?v=20261015-pastel" alt="" width="18" height="18"><span>welcome.txt</span></button>
             <button class="task-tab" type="button" data-window="painting-window" aria-label="Show painting window" aria-pressed="true"><img src="assets/picture.svg?v=20261015-pastel" alt="" width="18" height="18"><span>landscape</span></button>
             <button class="task-tab" type="button" data-window="photo-window" aria-label="Show photo window" aria-pressed="true"><img src="assets/picture.svg?v=20261015-pastel" alt="" width="18" height="18"><span>cat</span></button>

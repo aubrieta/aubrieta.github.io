@@ -1,0 +1,87 @@
+/* Native cursors keep the pointer precise, including inside the lists iframe. */
+@media (any-hover: hover) and (any-pointer: fine) and (forced-colors: none) {
+    :root {
+        --cursor-arrow: url('assets/cursors/arrow.svg?v=20261029-stars') 3 2, default;
+        --cursor-star: url('assets/cursors/star.svg?v=20261029-hearts-stars') 3 2, pointer;
+        --cursor-grab: url('assets/cursors/grab.svg') 16 16, grab;
+        --cursor-grabbing: url('assets/cursors/grabbing.svg') 16 16, grabbing;
+        cursor: var(--cursor-arrow);
+    }
+
+    body { cursor: var(--cursor-arrow); }
+
+    :where(p, h1, h2, h3, li, dt, dd, figcaption, input, textarea, [contenteditable="true"]) {
+        cursor: text;
+    }
+
+    :is(a[href], button, .button, summary, select, label[for], [role="button"], input:is([type="button"], [type="submit"], [type="checkbox"], [type="radio"])) {
+        cursor: var(--cursor-star);
+    }
+
+    .draggable-window > .title-bar,
+    #welcome-handle { cursor: var(--cursor-grab); }
+
+    .draggable-window > .title-bar:is(:active, .is-dragging),
+    #welcome-handle:is(:active, .is-dragging) { cursor: var(--cursor-grabbing); }
+
+    :is(button:disabled, input:disabled, select:disabled, [aria-disabled="true"]) {
+        cursor: not-allowed;
+    }
+}
+
+.cursor-effects {
+    position: fixed;
+    inset: 0;
+    z-index: 2147483647;
+    overflow: hidden;
+    pointer-events: none;
+    contain: strict;
+}
+
+.cursor-particle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    background: var(--particle-color, #edb6f6);
+    clip-path: polygon(50% 0, 61.8% 33.8%, 97.6% 34.5%, 69% 56.2%, 79.4% 90.5%, 50% 70%, 20.6% 90.5%, 31% 56.2%, 2.4% 34.5%, 38.2% 33.8%);
+    pointer-events: none;
+    animation: cursor-drift 620ms steps(12, end) forwards;
+}
+
+.cursor-particle--sparkle {
+    width: 14px;
+    height: 14px;
+}
+
+.cursor-particle--burst {
+    width: 28px;
+    height: 28px;
+    clip-path: none;
+    background: url('assets/star.svg') center / contain no-repeat;
+    animation: cursor-pop 540ms steps(10, end) forwards;
+}
+
+.cursor-particle--heart {
+    clip-path: none;
+    background: url('assets/heart.svg') center / contain no-repeat;
+}
+
+@keyframes cursor-drift {
+    0% { transform: translate(var(--x), var(--y)) translate(-50%, -50%) scale(.5); opacity: 0; }
+    15% { transform: translate(calc(var(--x) + var(--dx) * .15), calc(var(--y) + var(--dy) * .15)) translate(-50%, -50%) scale(1); opacity: .95; }
+    100% { transform: translate(calc(var(--x) + var(--dx)), calc(var(--y) + var(--dy))) translate(-50%, -50%) scale(.3) rotate(72deg); opacity: 0; }
+}
+
+@keyframes cursor-pop {
+    0% { transform: translate(var(--x), var(--y)) translate(-50%, -50%) scale(.35) rotate(-30deg); opacity: 0; }
+    20% { opacity: 1; }
+    55% { transform: translate(var(--x), var(--y)) translate(-50%, -50%) scale(1.1) rotate(15deg); opacity: 1; }
+    100% { transform: translate(var(--x), var(--y)) translate(-50%, -50%) scale(1.3) rotate(30deg); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce), (forced-colors: active) {
+    .cursor-effects { display: none; }
+    .cursor-particle { animation: none; }
+}
