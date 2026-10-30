@@ -1,0 +1,38 @@
+.foliage-cronch .list-title {
+    font-size: clamp(30px, 5.5vw, 48px);
+    overflow-wrap: anywhere;
+}
+
+.foliage-cronch .list-items {
+    gap: 2rem;
+}
+
+.foliage-cronch .list-entry + .list-entry {
+    border-top: 1px dashed #c8bdd5;
+    padding-top: 1.5rem;
+}
+
+.foliage-cronch .list-entry-copy {
+    font-weight: bold;
+}
+
+.list-entry-video {
+    display: block;
+    width: min(100%, 19rem);
+    aspect-ratio: 9 / 16;
+    margin-top: 0.85rem;
+    border: 1px solid var(--line);
+    background: #2f2b43;
+    object-fit: contain;
+}
+
+.list-entry-video:focus-visible {
+    outline: 2px dashed #62508f;
+    outline-offset: 5px;
+}
+
+.foliage-cronch .list-meta {
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 12px;
+}

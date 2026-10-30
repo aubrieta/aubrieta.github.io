@@ -127,6 +127,41 @@
             item.appendChild(note);
         }
 
+        if (normalized.video && normalized.video.src) {
+            var video = document.createElement("video");
+            var source = document.createElement("source");
+            var fallback = document.createElement("a");
+
+            item.classList.add("list-entry-with-video");
+            video.className = "list-entry-video";
+            video.controls = true;
+            video.playsInline = true;
+            video.preload = "none";
+            video.setAttribute("aria-label", normalized.video.label || normalized.text || "List video");
+
+            if (normalized.video.poster) {
+                video.poster = normalized.video.poster;
+            }
+
+            source.src = normalized.video.src;
+            source.type = normalized.video.type || "video/mp4";
+            video.appendChild(source);
+
+            fallback.href = normalized.video.src;
+            fallback.textContent = "Open this video";
+            video.appendChild(fallback);
+
+            video.addEventListener("play", function () {
+                list.querySelectorAll("video").forEach(function (otherVideo) {
+                    if (otherVideo !== video) {
+                        otherVideo.pause();
+                    }
+                });
+            });
+
+            item.appendChild(video);
+        }
+
         return item;
     }
 
